@@ -1,0 +1,135 @@
+day1 2022.10.24  	 Powershell	d:目录变更为d盘  mkdir创建目录  python ex.py运行代码
+									 python			ex1:	print()打印
+									 						ex2:	#注释
+									 						ex3:	数字计算
+									 						ex4:	变量和命名
+									 						ex5:	print(f{})打印字符串  round()四舍五入
+
+day2 2022.10.25		 python			ex6:	字符串和文本 初见format
+									 						ex7:	习题 end=' '可不打印新一行<Cheese Burger>
+									 						ex8:	函数的使用 若没有，字符串会合并
+									 						ex9:	"""   """字符串跨行   \n换行  \转义(" \" ")
+									 						ex10:	转义序列 基础篇P32
+
+day3 2022.10.26		 python			ex11:input()输入内容  int(input())获取数字
+									 						ex12:input("提示内容") pydoc文档生成工具
+									 						ex13:import语句调用模块(库) argv(argument variable)参数变量 unpack解包
+									 						ex14:argv与input结合使用  用户提示符设为变量可方便更改 prompt = ">"  input(prompt)
+									 						ex15:open()打开文件 read()读取文件 close()关闭文件 open( , encoding="utf-8")显示汉字
+
+day4 2022.10.27		 Powershell ni name创建文件
+									 python			ex16:open( ,w)覆写文件  w+同时读写  默认r(read)只读模式  及时使用close关闭文件防止循环导致溢出
+									 						ex17:复制文件 open与read可以合并成indata = open().read()          print(">>>> file=", repr(file))  repr()返回一个对象的字符串格式(左右加引号)
+									 						ex18:def function(variable)创建函数       def 函数名(变量,变量):
+									 						ex19:函数里的变量与脚本里的变量没有联系，可以使用字符串、数字、变量、数字计算、变量+数字计算等方式将变量输送给函数  函数栈是临时的 不会储存数据
+									 						ex20:readline()只读取文本文件中的一行 下一次调用则读取下一行 seek(0)转到文件的0字节  readlines()读取全部文本并存储为列表
+									 						ex21:return x返回值到变量中 可以是数，字符串等
+									 						ex22:总结
+									 						ex23:字符串、字节串和字符编码 ASCII utf-8
+
+day5 2022.10.28		 python			ex24:"".format()另一种格式字符串的方式  variable = function(x) [function return a, b, c] 将列表应用于格式字符串  format(*variable)依次输入列表变量
+									 						ex25:.split()切片字符串  pop()弹出 默认从最后开始   sorted()排序
+									 						ex26:纠错练习 a += 1  <===>  a = a + 1
+									 						ex27:True和False的逻辑关系
+									 						ex28:布尔表达式练习
+									 						ex29:if语句 #为什么这一节的习题会出现在ex26中？
+									 						ex30:else 和 if语句
+									 						ex31:一个小游戏if-elif-else练习的小游戏  判断取值可以用1 < x < 10或是x in range(1,10)(1~9)
+									 						ex32:列表list = [1, 2, 3, "a", "b", "c"]   list.append(i)将整体i加入列表list  for i in x for循环
+									 						     list.extend(i)将i的内容分散添加  list.insert(1, i)将i添加在位置1  in/not in存在/不存在则返回True
+									 								 del list[i]/list.pop(i)删除/弹出位置i字符  list.remove(i)删除元素i  list.sort()排序  list.reverse()倒序  list2 = sorted(list, reverse = True)(默认False)
+
+day6 2022.10.29    python			ex33:while循环
+									 						ex34:列表的元素位置  0为正数第一个 -1为倒数第一个
+									 						ex35:exit(0)无错误退出  exit(1)有错误退出   exit∈sys
+									 						ex36:设计和调试 if语句的规则 循环的规则 家庭作业
+									 						ex37:各种符号与关键字
+									 						ex38:' 'join.(i)用 依次插入i中  list[3:5]类似range(3,5) 切片3、4
+									 						ex39:stuff = {'name':'Zed','age':'39'}字典  stuff['city'] = "Beijing"字典添加内容  del stuff['city']字典删除内容
+									 								 list(stuff.items())可将字典中的内容生成列表 stuff.get('name',value)可获得Zed 若没有name则获得value 默认为None
+									 						ex40:import xxx模块、class类和object对象  class类(https://zhuanlan.zhihu.com/p/30024792)(https://blog.csdn.net/weixin_45410337/article/details/97423095)
+
+day7 2022.10.30 	 python			ex41:oop理解小测试 运行ex41.py即可(代码为用单词替换PHRASES字典中的@@@、***、%%%、等字符，无需看懂) 运行ex41.py时若加上第二个参数english,则问题和答案互换
+									 						ex42:父类-子类 super(类名,self).父类方法名 调用父类的方法进行重写扩展  在class定义的函数即为方法
+									 						ex43:randint(0.200)随机数∈random  dedent("""xxx""")删除每行字符串前面的空格∈textwrap   面向对象小游戏练习
+
+day8-15 2022.10.31 python 		ex44:隐式继承 显式覆盖 super重写扩展   在__init__中使用self.变量 = 类名()可实现继承功能(set.other = Other())  后续方法可通过self.other.方法名()调用Other()中的函数
+		   -2022.11.06 						ex45:自制一款游戏
+									 						day1:基础框架仿照ex43写好  import re >> ''.join(re.findall('[\u4e00-\u9fa5]',变量名))可提取中文
+									 								 rstrip('想删除的字符')与lstrip('想删除的字符')可删除字符串右与左不想要的字符  replace(想要替换的内容,替换的内容)可以替换原来不想要的字符
+                              day2:if " " in 字符串 可以用来判断用户是否输入了指定的指令  创建了打印行的模块import print_line  import 模块名 an 字符(p)可在调用函数时进行缩写(p.printline())
+																	 思路:将打印习题内容改为指定打印行数，减少主函数的内容 ===>创建Ex.py 定义数个Ex函数存放纯文字内容，在主函数里直接引用
+															day3:将介绍文档用readlines转换为列表进行切片打印 可以循环使用 不再被readline所限制 ===>课题内容也可写进Ex.txt文本直接切片打印  isdigit()判断是否为数字
+																	 ''.join([i for i in a if not i.isdigit()])   ''.join(变量)将变量中的字符用None相连  float()浮点数  eval()去除字符串两边的括号
+																	 思路:定义一个延时函数，所有延时使用该函数，程序开始时让用户输入延时时间 ===>直接开始定义个time = input(),使用sleep(time)
+																	 pyinstaller [主文件] -p [其他文件1] -p [其他文件2] -p [其他文件3] --hidden-import [自建模块1] --hidden-import [自建模块2] --hidden-import [自建模块3]
+																	 双层循环可以在break第一层循环时定义个变量，第二层循环用if停止
+															day4:思路:设置一个选关程序  isalnum()判断字符和数字  alpha()判断字符  ex4的各种判断太麻烦了！！
+															day5:新发现四个bug,用了个超长的if语句修好了^_^  except捕获异常  len(input()) == 0可以判断无输入
+															day6:思路:将字体每行显示改为在每行的基础上每字显示√  flush=True可以让print在不换行的情况下马上显示内容  index(内容)查找内容索引
+																	 变量名.read().splitlines()可以去掉readlines中的换行符
+															day7:将剩余的字全部放入txt 封装成exe进行试玩
+
+——————————————————————————————复习学校考试
+
+day16 2022.11.18	 python			ex46:创建虚拟环境 .\activate进入虚拟环境 制作项目骨架
+															ex47:assert断言函数(https://www.cnblogs.com/llsix/p/8474322.html)  .update({a: b})更新字典
+															ex48:用户输入进阶  元组(tuple)不能修改的列表  isdigit只对字符串起作用
+																	 大小写转换 例如.lower()(https://blog.csdn.net/cw7600/article/details/126612352)
+															ex49:创建句子 感觉和ex48用处不大，暂时跳过
+
+
+day17 2022.11.19	 Powershell set设置环境变量 Linus中用export   mkdir -p name1,name2可一次性创建多个文件夹
+									 python			ex50:flask框架创建web  app.debug=True可以在运行时打开debug模式  !!!!!!!注意模块与python的版本是否有冲突!!!!!!!
+									 HTML            {% 可执行代码 %}  {{ 文本变量 }}
+
+day18 2022.11.20   python		  ex51:request.args从url获取数据 request.form从表单获取数据  ex52暂时搁置
+									 HTML            action="/hello"请求发送给/hello URL  <input type=" " name=" ">获取输入
+									 								 {% entends "layout.html" %} 和 {% block content %} {% endblock %}可以将页面顶部和底部反复用到的样板代码剥掉并用layout.html处理
+
+——————————————————————————————装Linus虚拟机
+
+day19 2022.11.21   python     研究pygame,优化ex45中我自己的游戏(http://m.biancheng.net/pygame/what-is-pygame.html)
+															输入框完成 实现选中输入框后输入框变色 可以输入内容
+															思路:设计一个类似插入点的竖线，功能先搁置 也许可以通过每输入/删除一个字符就刷新插入点的位置来实现
+
+day20 2022.11.22   python     输入start后游戏开始 输入框上方应显示所输入的指令 下方应显示游戏文本(未完成)
+
+day21 2022.11.23   python     已可以把ex45的代码整合进pygame程序里，但还不知道怎么调用库，只能把自制库中的代码也一并整合进来
+															尝试在自建print库中设计打印程序成功，但逐字打印并显示功能还不知如何实现，在函数运行完之前屏幕似乎不会刷新
+															我是弱智 刷新指令忘记打()了  b = [line.strip("\n") for line in b]可以将readlines后的列表中删掉\n(列表生成式https://blog.csdn.net/qdPython/article/details/126725534)
+															逐行逐字打印已经实现，接下来需要做的是在打完一行后将上一行文字上移，而在文字原本的位置上继续打印下一行
+															思路:在事件空闲期当玩家使用鼠标滚轮，显示本题全部文字
+
+day22 2022.11.24   python     换行后本行文字上移以完成  用户可输入字句间隔时间完成  目前只剩下游戏程序的运行  若是通过库引用程序需要将ex45_main用pygame大改,所以决定直接整合进主函数
+															目前问题:二重循环时只能将事件获取的代码再次输入一次，不知道是否有更好的方法
+
+day23 2022.11.25   python     ex1基本上做完了 但目前有个问题是游戏文本更新刷新屏幕时下方显示的用户输入的代码也会被刷掉
+
+day24 2022.11.28   python     ex1全部完成
+
+day25 2022.11.29   python     尝试了一下在调用打印自制库时不未响应，若用wait时需要有事件才能打印，若用get会报错 先改回来了
+															修了一下bug 制作ex2 修改了一下ex1的细节
+
+day26 2022.11.30   python     完成了ex3 修复了ex2的已知bug
+
+day27 2022.12.03   python     完成了ex4 修改了剩下的文档内容，使其可以正确的在软件中换行打印
+															对print模块进行了更改，在打印文字的时候不会未响应了！
+															明天如果没什么事情做完ex5那这个软件的测试版就算是全部完成了
+
+day28 2022.12.04	 python     完成了ex5 设置了一个简单的开发人员的跳关系统
+															目前算是全部完成了，后续看看能不能把界面做的更加精美，再加上些音效什么的
+															../可以获取上一级目录的文件
+
+day29 2022.12.05	 python     pygame音效(https://wenku.baidu.com/view/9c930b0a29f90242a8956bec0975f46527d3a794.html?_wkts_=1670248443710&bdQuery=pygame%E6%8F%92%E5%85%A5%E9%9F%B3%E6%95%88)
+															添加了点击输入框的音效与键盘打字的音效  目前发现的bug:在软件进行打印提示语的时候会出现打字音效
+															还需要每一关尝试一下 有些地方连接性有些问题
+
+day30 2022.12.10   python			ex1pro~3pro:关于流程-创新-质量
+															ex4:处理命令行参数	→尝试使用新的模块时(argparse)先阅读文档/教程(https://blog.csdn.net/weixin_42725119/article/details/127657832)
+
+day31 2022.12.11	 python			ex5:cat命令 →做新项目时的启动能力与阻力
+															ex6~ex12:全都是用argparse去实现终端的功能，跳过
+															ex13:链表 尝试设计python中的list和其的功能指令  .count查找字符串出现的次数
+															ex14:双链表
+															又修复了一下自制程序的一些bug  研究了一下GitHub
