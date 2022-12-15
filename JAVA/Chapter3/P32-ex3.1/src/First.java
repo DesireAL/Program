@@ -1,9 +1,13 @@
 package Number;
-public class Frist {
-    static String s1="你好";
+public class First {
     public static void main(String[] args) {
         String s2="Java";
-        System.out.println(s1);
+        System.out.println(Second.s1);
         System.out.println(s2);
     }
 }
+
+class Second {
+    static String s1="你好";
+}
+
