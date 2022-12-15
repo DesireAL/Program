@@ -1,0 +1,7 @@
+day01 2022.12.13      java      安装了2022.3版本的IDEL 安装了OracleJDK11，配置了环境变量，不过IDEL似乎不需要自己更改环境变量，若使用Eclipse则需要
+                                点击行数旁边可设置断点，右键断点可进行编辑
+                                ex3.1: static的用法(https://blog.csdn.net/Ambition_ZM/article/details/101705741)
+
+day02 2022.12.14      java      ex3.1: 类的属性为全局变量(s1)，方法中的属性为局部变量(s2)
+                                ex3.2: print()输出完毕后不换行，而println()输出完毕后会换行  char用于储存单个字符 String用于储存字符串 " "表示字符串 ' '表示单个字符 char x='a'
+                                       char与int可以通过Unicode相互转换  在println中可以使用(int)word来让word变为整数型  boolean定义布尔类型
