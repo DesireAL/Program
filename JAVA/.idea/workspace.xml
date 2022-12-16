@@ -10,6 +10,13 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
@@ -27,26 +34,28 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
     "jdk.selected.JAVA_MODULE": "11",
-    "last_opened_file_path": "D:/Program/JAVA/Chapter3/P43-3.3.4-train4/src",
+    "last_opened_file_path": "D:/Program/JAVA/Chapter3/P50-3.4.8-train6/src",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
-    "project.structure.last.edited": "SDK",
+    "project.structure.last.edited": "模块",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "File.Encoding",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Program\JAVA\Chapter3\P50-3.4.8-train6\src" />
       <recent name="D:\Program\JAVA\Chapter3\P43-3.3.4-train4\src" />
     </key>
   </component>
-  <component name="RunManager" selected="应用程序.First">
+  <component name="RunManager">
     <configuration name="First" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Number.First" />
-      <module name="P32-ex3.1" />
+      <module name="P32-3.1.1-ex3.1" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="Number.*" />
@@ -57,9 +66,16 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="P50-3.4.8-train6" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Second" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Number.Second" />
-      <module name="P32-ex3.1" />
+      <module name="P32-3.1.1-ex3.1" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="Number.*" />
@@ -72,8 +88,9 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="应用程序.First" />
+        <item itemvalue="应用程序.Main" />
         <item itemvalue="应用程序.Second" />
+        <item itemvalue="应用程序.First" />
       </list>
     </recent_temporary>
   </component>
@@ -89,6 +106,9 @@
       <workItem from="1671104323476" duration="97000" />
       <workItem from="1671104440582" duration="6000" />
       <workItem from="1671104467586" duration="2374000" />
+      <workItem from="1671181880075" duration="3836000" />
+      <workItem from="1671185835944" duration="379000" />
+      <workItem from="1671186229212" duration="429000" />
     </task>
     <servers />
   </component>

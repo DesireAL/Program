@@ -2,7 +2,8 @@
 <project version="4">
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$/Chapter3/P38-3.2.4-train1/src/Granary.java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/Chapter3/P43-3.3.4-train4/src/CountSalary.java" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/Chapter3/P43-3.3.4-train4/src/OutputChar.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/Chapter3/P43-3.3.4-train4/src/OutputChar.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Chapter3/P50-3.4.8-train6/src/Cramer.java" charset="UTF-8" />
+    <file url="PROJECT" charset="UTF-8" />
   </component>
 </project>

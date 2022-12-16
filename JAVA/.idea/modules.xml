@@ -4,9 +4,11 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Chapter3/Chapter3.iml" filepath="$PROJECT_DIR$/Chapter3/Chapter3.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/JAVA.iml" filepath="$PROJECT_DIR$/.idea/JAVA.iml" />
-      <module fileurl="file://$PROJECT_DIR$/Chapter3/P32-ex3.1/P32-ex3.1.iml" filepath="$PROJECT_DIR$/Chapter3/P32-ex3.1/P32-ex3.1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Chapter3/P32-3.1.1-ex3.1/P32-3.1.1-ex3.1.iml" filepath="$PROJECT_DIR$/Chapter3/P32-3.1.1-ex3.1/P32-3.1.1-ex3.1.iml" />
       <module fileurl="file://$PROJECT_DIR$/Chapter3/P38-3.2.4-train1/P38-3.2.4-train1.iml" filepath="$PROJECT_DIR$/Chapter3/P38-3.2.4-train1/P38-3.2.4-train1.iml" />
       <module fileurl="file://$PROJECT_DIR$/Chapter3/P43-3.3.4-train4/P43-3.3.4-train4.iml" filepath="$PROJECT_DIR$/Chapter3/P43-3.3.4-train4/P43-3.3.4-train4.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Chapter3/P44-3.4.2-ex3.8/P44-3.4.2-ex3.8.iml" filepath="$PROJECT_DIR$/Chapter3/P44-3.4.2-ex3.8/P44-3.4.2-ex3.8.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Chapter3/P50-3.4.8-train6/P50-3.4.8-train6.iml" filepath="$PROJECT_DIR$/Chapter3/P50-3.4.8-train6/P50-3.4.8-train6.iml" />
     </modules>
   </component>
 </project>
