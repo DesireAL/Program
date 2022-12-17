@@ -17,3 +17,9 @@ day04 2022.12.16      java      3.4:   import java.util.Scanner调用扫描器  
                                        b = ++a 先将a的值+1，然后赋给b  b = a++ 先将a的值赋给b，然后a的值+1  &&逻辑与(and) ||逻辑或(or)
                                 3.5:   隐式/显示类型转换
                                 3.6:   //单行注释   /*  */多行注释   /**  */文档注释
+
+day05 2022.12.17      java      4.1:   { }复合语句，可以在里面创建临时变量
+                                4.2:   if(布尔表达式){语句序列} else if(){} else{}  if语句格式
+                                       switch(表达式){case 常量值1: 语句块1; break; ... default: 语句块n; break;}   switch语句格式 case后不能为非整数的实数，没写语句块的case会使用下一个语句块。
+                                4.3:   while(语句表达式){语句序列}  do{语句序列}while(语句表达式);  for(表达式1;表达式2;表达式3){语句序列} 1:变量初始化 2:循环条件 3:改变变量  两种循环
+                                       for(元素类型x:遍历对象obj){引用了x的java语句;}  foreach语句(和python中的for i in x差不多?)

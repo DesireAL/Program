@@ -34,7 +34,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
     "jdk.selected.JAVA_MODULE": "11",
-    "last_opened_file_path": "D:/Program/JAVA/Chapter3/P50-3.4.8-train6/src",
+    "last_opened_file_path": "D:/Program/JAVA/Chapter3/P55-3.7-train8/src",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -48,6 +48,7 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Program\JAVA\Chapter3\P55-3.7-train8\src" />
       <recent name="D:\Program\JAVA\Chapter3\P50-3.4.8-train6\src" />
       <recent name="D:\Program\JAVA\Chapter3\P43-3.3.4-train4\src" />
     </key>
@@ -88,9 +89,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="应用程序.First" />
         <item itemvalue="应用程序.Main" />
         <item itemvalue="应用程序.Second" />
-        <item itemvalue="应用程序.First" />
       </list>
     </recent_temporary>
   </component>
@@ -108,7 +109,8 @@
       <workItem from="1671104467586" duration="2374000" />
       <workItem from="1671181880075" duration="3836000" />
       <workItem from="1671185835944" duration="379000" />
-      <workItem from="1671186229212" duration="429000" />
+      <workItem from="1671186229212" duration="1024000" />
+      <workItem from="1671274584806" duration="1012000" />
     </task>
     <servers />
   </component>
