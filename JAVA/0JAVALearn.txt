@@ -26,3 +26,10 @@ day05 2022.12.17      java      4.1:   { }复合语句，可以在里面创建�
 
 day06 2022.12.18      java      4.4：  break中断循环  continue立刻执行下一次循环  标签名: 循环体+break 标签名中断外层循环(continue用法与break相同)
                                 4.5：  String a = String.valueOf(x)可以将x转换为字符串形式
+
+day07 2022.12.19      java      5.2:   类型 数组名[]; 创建数组 + 数组名=new 类型[元素个数]; 分配内存空间    数组初始化例:int arr[]={11,25,37,42,678};
+                                       以上两条可以合并成: 类型 数组名[]=new 类型[元素个数];                          int arr[]=new int[]{11,25,37,42,678};
+                                5.3:   .length可以判断长度    二维数组与一维相似int arr[]=new int[2][4]                int arr[][]={{0,1}{0,1}};
+                                5.4:   import java.util.Arrays Arrays.fill(数组名, 起始位置, 结束位置, 元素2); 可将数组中指定位置的元素1替换为元素2,不填起始与结束位置则为全部
+                                       Arrays.sort(数组名); 可对数组进行升序排序  Arrays.copyOf(数组名,长度);和Arrays.copyOfRange(数组名,起始位置,结束位置);可复制数组中元素
+                                       Arrays.binarySearch(数组名,起始位置,结束位置,key); 可在数组中查找key,并返回索引值 (使用前最好进行排序,不指定位置则为全部位置)
