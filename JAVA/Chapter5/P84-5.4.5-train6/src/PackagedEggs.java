@@ -9,4 +9,4 @@ public class PackagedEggs {
 			System.out.println("µÚ" + (i + 1) + "Ïä×°ÁË" + boxes[i] + "Ã¶¼¦µ°");
 		}
 	}
-}i
+}
