@@ -26,13 +26,47 @@ public class Main {
             char input = sc.next().charAt(0);
             if(input == 'D' && y!=9){
                 y++;
+                if(x==boxx && y==boxy){
+                    boxy++;
+                    if(boxy==9){
+                        boxy--;
+                        y--;
+                    }
+                }
             }else if(input == 'A' && y!=1){
                 y--;
+                if(x==boxx && y==boxy){
+                    boxy--;
+                    if(boxy==0){
+                        boxy++;
+                        y++;
+                    }
+                }
             }else if(input == 'W' && x!=1){
                 x--;
+                if(x==boxx && y==boxy){
+                    boxx--;
+                    if(boxx==0){
+                        boxx++;
+                        x++;
+                    }
+                }
             }else if(input == 'S' && x!=6){
                 x++;
-            }else;
+                if(x==boxx && y==boxy){
+                    boxx++;
+                    if(boxx==7){
+                        boxx--;
+                        x--;
+                    }
+                }
+            }else{
+                System.out.println("当前箱子坐标为 "+boxx+" "+boxy);
+            }
+            if(boxx==6 && boxy==5){
+                System.out.println("游戏成功！");
+                break;
+            }
         }
     }
 }
