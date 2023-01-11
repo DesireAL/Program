@@ -31,31 +31,31 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;11&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/Program/JAVA/Chapter5/P89-5.6.1-train3/src&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;模块&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;File.Encoding&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "jdk.selected.JAVA_MODULE": "11",
+    "last_opened_file_path": "D:/Program/JAVA/Chapter6/P111-6.7.1-train8/src",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "project.structure.last.edited": "模块",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "File.Encoding",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Program\JAVA\Chapter6\P111-6.7.1-train8\src" />
+      <recent name="D:\Program\JAVA\Chapter6\P111-6.7.1-train7\src" />
+      <recent name="D:\Program\JAVA\Chapter6\P111-6.7.1-train5\src" />
+      <recent name="D:\Program\JAVA\Chapter6\P110-6.7.1-train2\src" />
       <recent name="D:\Program\JAVA\Chapter5\P89-5.6.1-train3\src" />
-      <recent name="D:\Program\JAVA\Chapter5\P89-5.6.1-train2\src" />
-      <recent name="D:\Program\JAVA\Chapter5\P89-5.6.1-train1\src" />
-      <recent name="D:\Program\JAVA\Chapter5\P87-5.5.2-ex5.13\src" />
-      <recent name="D:\Program\JAVA\Chapter5\src" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\Program\JAVA\Chapter4" />
@@ -123,6 +123,8 @@
       <workItem from="1671450141036" duration="3634000" />
       <workItem from="1671706707866" duration="5054000" />
       <workItem from="1671792814099" duration="2587000" />
+      <workItem from="1673073370085" duration="24000" />
+      <workItem from="1673426356411" duration="2477000" />
     </task>
     <servers />
   </component>
