@@ -50,3 +50,9 @@ day10 2022.12.25      java      6.3:   类的构造方法:1.没有返回值 2.�
                                 6.5:   主方法的行参是数组，所以是String[] args的形式，可以用args.length获取参数的个数
                                 6.6:   通过new来创建对象,每实例化一个对象就会自动调用一次构造方法(和python相同)    类名 对象的引用变量=new 类名(参数) 使用引用变量进行调用参数(d1.xxx)
                                        java的垃圾回收 finalize()跳过一次回收 System.gc()强制进行一次垃圾回收
+
+day11 2023.01.11      java      6.6:   习题
+
+day12 2023.01.13      java      7.1:   单继承:class Child extends Parent{}   子类可以调用父类的属性和方法
+                                7.2:   Objext类:getClass()返回对象执行时的Class实例   toString()将一个对象返回为字符串形式，通常会进行重写P115   equals()比较两个对象的实际内容
+                                       https://blog.csdn.net/BitcoinR/article/details/123137553
