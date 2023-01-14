@@ -55,4 +55,7 @@ day11 2023.01.11      java      6.6:   习题
 
 day12 2023.01.13      java      7.1:   单继承:class Child extends Parent{}   子类可以调用父类的属性和方法
                                 7.2:   Objext类:getClass()返回对象执行时的Class实例   toString()将一个对象返回为字符串形式，通常会进行重写P115   equals()比较两个对象的实际内容
-                                       https://blog.csdn.net/BitcoinR/article/details/123137553
+
+day13 2023.01.14      java      7.3:   向上转型:父类 父类对象 = new 子类(); People tom = new teacher();   父类的对象无法调用子类独有的属性或者方法。安全
+                                       向下转型:子类 子类对象 = (子类) 父类对象; Pigeon pigeon = (Pigeon) bird;   父类对象要先引用这个子类对象。不安全
+                                7.4:   instanceof判断一个实例对象是否属于一个类 当s为Square类时 System.out.println(s instanceof Quadrangle)会输出true
