@@ -59,3 +59,10 @@ day12 2023.01.13      java      7.1:   单继承:class Child extends Parent{}   
 day13 2023.01.14      java      7.3:   向上转型:父类 父类对象 = new 子类(); People tom = new teacher();   父类的对象无法调用子类独有的属性或者方法。安全
                                        向下转型:子类 子类对象 = (子类) 父类对象; Pigeon pigeon = (Pigeon) bird;   父类对象要先引用这个子类对象。不安全
                                 7.4:   instanceof判断一个实例对象是否属于一个类 当s为Square类时 System.out.println(s instanceof Quadrangle)会输出true
+
+day14 2023.01.16      java      7.5:   方法的重载:参数的顺序/类型/数量不同，即可构成重载  定义不定长参数可以使用 返回值类型 方法名(参数类型...参数名称)<public static int add(int...a){}>
+                                       编译器会将int...a看做是int[]a
+                                7.6:   final关键字:
+                                                  final定义的变量不可被更改
+                                                  final定义的方法可以防止子类修改父类的定义与实现方式(private与其相同，所以无需定义private后再定义为final)
+                                                  final定义的类不能被继承
