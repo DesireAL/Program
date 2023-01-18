@@ -66,3 +66,10 @@ day14 2023.01.16      java      7.5:   方法的重载:参数的顺序/类型/�
                                                   final定义的变量不可被更改
                                                   final定义的方法可以防止子类修改父类的定义与实现方式(private与其相同，所以无需定义private后再定义为final)
                                                   final定义的类不能被继承
+
+day15 2023.01.18      java      7.7:   多态:习题
+                                7.8:   抽象abstract:该关键字可以定义抽象类与抽象方法，承载抽象方法的抽象类必须被继承
+                                       接口interface:该关键字可以定义接口,可以将xx方法封装到接口中，使需要xx方法的的类实现这个接口，同时继承抽象类
+                                       继承父类的同时实现一个接口:public class 子类 extends 父类 implements 接口{}
+                                       一个接口可以继承另一个接口:interface 子接口 extends 父接口
+                                       public与static的理解(https://blog.csdn.net/v7595v/article/details/45845347)
