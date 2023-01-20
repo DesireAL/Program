@@ -58,7 +58,7 @@ day12 2023.01.13      java      7.1:   单继承:class Child extends Parent{}   
 
 day13 2023.01.14      java      7.3:   向上转型:父类 父类对象 = new 子类(); People tom = new teacher();   父类的对象无法调用子类独有的属性或者方法。安全
                                        向下转型:子类 子类对象 = (子类) 父类对象; Pigeon pigeon = (Pigeon) bird;   父类对象要先引用这个子类对象。不安全
-                                7.4:   instanceof判断一个实例对象是否属于一个类 当s为Square类时 System.out.println(s instanceof Quadrangle)会输出true
+                                7.4:   instanceof 左边的对象是否是它右边的类的实例，返回 boolean 的数据类型 当s为Square类时 System.out.println(s instanceof Quadrangle)会输出true
 
 day14 2023.01.16      java      7.5:   方法的重载:参数的顺序/类型/数量不同，即可构成重载  定义不定长参数可以使用 返回值类型 方法名(参数类型...参数名称)<public static int add(int...a){}>
                                        编译器会将int...a看做是int[]a
@@ -68,7 +68,7 @@ day14 2023.01.16      java      7.5:   方法的重载:参数的顺序/类型/�
                                                   final定义的类不能被继承
 
 day15 2023.01.18      java      7.7:   多态:习题
-                                7.8:   抽象abstract:该关键字可以定义抽象类与抽象方法，承载抽象方法的抽象类必须被继承
+                                7.8:   抽象abstract:abstract class 类名{} 该关键字可以定义抽象类与抽象方法，承载抽象方法的抽象类必须被继承
                                        接口interface:该关键字可以定义接口,可以将xx方法封装到接口中，使需要xx方法的的类实现这个接口，同时继承抽象类
                                        继承父类的同时实现一个接口:public class 子类 extends 父类 implements 接口{}
                                        一个接口可以继承另一个接口:interface 子接口 extends 父接口
@@ -76,3 +76,6 @@ day15 2023.01.18      java      7.7:   多态:习题
 
 day16 2023.01.19      java      7.9:   super关键字可以在子类的构造方法中显示地调用父类的构造方法，super()必须为子类构造函数中的第一行。
                                        向下转型的意义(https://blog.csdn.net/helpluozhao123/article/details/117765890)
+
+day17 2023.01.20      java      7.9:   (int)(Math.random()*x)生成[0-x)的随机整数
+                                       可以通过 实例名.变量 来给实例的变量赋值

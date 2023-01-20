@@ -31,37 +31,37 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "jdk.selected.JAVA_MODULE": "11",
-    "last_opened_file_path": "D:/Program/JAVA/Chapter7/P132-7.9.1-train3/src",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "project.structure.last.edited": "模块",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "File.Encoding",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;11&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Program/JAVA/Chapter7/P132-7.9.1-train4/src&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;模块&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;File.Encoding&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Program\JAVA\Chapter7\P132-7.9.1-train4\src" />
       <recent name="D:\Program\JAVA\Chapter7\P132-7.9.1-train3\src" />
       <recent name="D:\Program\JAVA\Chapter7\P126-7.6.3-train11\src" />
       <recent name="D:\Program\JAVA\Chapter7\P124-7.5.1-train9\src" />
       <recent name="D:\Program\JAVA\Chapter7\P120-7.3.2-train6\src" />
-      <recent name="D:\Program\JAVA\Chapter7\P120-7.3.2-train6\" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\Program\JAVA\Chapter4" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="应用程序.First">
     <configuration name="First" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Number.First" />
       <module name="P32-3.1.1-ex3.1" />
@@ -130,6 +130,9 @@
       <workItem from="1673875667920" duration="3219000" />
       <workItem from="1674052851997" duration="1122000" />
       <workItem from="1674133261470" duration="4962000" />
+      <workItem from="1674211782480" duration="368000" />
+      <workItem from="1674212318784" duration="3068000" />
+      <workItem from="1674215986904" duration="30000" />
     </task>
     <servers />
   </component>
