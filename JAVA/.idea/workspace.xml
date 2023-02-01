@@ -37,7 +37,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
     "jdk.selected.JAVA_MODULE": "11",
-    "last_opened_file_path": "D:/Program/JAVA/Chapter8/src",
+    "last_opened_file_path": "D:/Program/JAVA/Chapter8/src/P140/train3",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -51,11 +51,11 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Program\JAVA\Chapter8\src\P140\train3" />
       <recent name="D:\Program\JAVA\Chapter8\src" />
       <recent name="D:\Program\JAVA\Chapter7\P132-7.9.1-train4\src" />
       <recent name="D:\Program\JAVA\Chapter7\P132-7.9.1-train3\src" />
       <recent name="D:\Program\JAVA\Chapter7\P126-7.6.3-train11\src" />
-      <recent name="D:\Program\JAVA\Chapter7\P124-7.5.1-train9\src" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\Program\JAVA\Chapter4" />
@@ -135,6 +135,7 @@
       <workItem from="1674215986904" duration="30000" />
       <workItem from="1675078881814" duration="183000" />
       <workItem from="1675079189466" duration="3461000" />
+      <workItem from="1675266969435" duration="948000" />
     </task>
     <servers />
   </component>

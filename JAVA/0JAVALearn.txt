@@ -70,11 +70,11 @@ day14 2023.01.16      java      7.5:   方法的重载:参数的顺序/类型/�
 day15 2023.01.18      java      7.7:   多态:习题
                                 7.8:   抽象abstract:abstract class 类名{} 该关键字可以定义抽象类与抽象方法，承载抽象方法的抽象类必须被继承
                                        接口interface:该关键字可以定义接口,可以将xx方法封装到接口中，使需要xx方法的的类实现这个接口，同时继承抽象类
-                                       继承父类的同时实现一个接口:public class 子类 extends 父类 implements 接口{}
+                                       继承父类的同时实现一个接口:class 子类 extends 父类 implements 接口{}
                                        一个接口可以继承另一个接口:interface 子接口 extends 父接口
                                        public与static的理解(https://blog.csdn.net/v7595v/article/details/45845347)
 
-day16 2023.01.19      java      7.9:   super关键字可以在子类的构造方法中显示地调用父类的构造方法，super()必须为子类构造函数中的第一行。
+day16 2023.01.19      java      7.9:   super关键字可以在子类的构造方法中显示地调用父类的构造方法，super()必须为子类构造函数中的第一行
                                        向下转型的意义(https://blog.csdn.net/helpluozhao123/article/details/117765890)
 
 day17 2023.01.20      java      7.9:   (int)(Math.random()*x)生成[0-x)的随机整数
@@ -84,3 +84,10 @@ day18 2023.01.30      java      8.1:   类包:可以解决类的同名问题,同
                                        包的命名规则是全部使用小写字母  import关键字导入包(import com.mr.*是导入com.mr包中的所有类   import com.mr.Math是导入com.mr包中的Math类)
                                        指定包中所有类(*)时，并不会指定包的子包的类
                                        import static 静态成员:可以导入静态成员P136
+
+day19 2023.02.01      java      8.2:   成员内部类: 可以随意使用外部类的成员方法及成员变量
+                                                  创建内部类对象:  1.外部类名 外部类实例名 = new 外部类名();
+                                                                  2.外部类名.内部类名 内部类实例名 = 外部类实例名.new 内部类名();
+                                                  当内、外部类中的变量重名时，可以使用this.x调用内部类中的x变量，TheSameName.this.x调用外部类中的x变量
+                                       匿名内部类: 只在创建对象时才会编写，现用现写:new 父类/父接口(){ 子类实现的内容 };
+                                                  匿名内部类可以创建抽象类的实例,不能写构造方法,不能定义静态的乘员，如果没用赋值给任何变量则用完一次就会被销毁。

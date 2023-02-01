@@ -1,5 +1,5 @@
-package com.mr.game;
-import com.mingrisoft.test.MyTest;
+package P136.mr.game;
+import P136.mingrisoft.test.MyTest;
 
 public class GameDemo {
     public static void main(String[] argv){

@@ -1,4 +1,4 @@
-package com.mingrisoft.test;
+package P136.mingrisoft.test;
 import static java.lang.System.out;
 public class MyTest {
     public static void main(){
