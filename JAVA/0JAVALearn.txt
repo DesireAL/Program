@@ -112,3 +112,11 @@ day23 2023.02.12      java      10.1:  可以用String s = new String(char a[], 
                                        也可以用new String(a)直接将列表内的全部内容转化为字符串
                                 10.2:  可以用+来连接字符串与其他内容 String a = b + c;
                                 10.3:  .length()可以获取字符串长度  .indexOf()与.lastIndexOf()可以获取首次/末次出现的位置  .charAt(下标数)可以将指定下标的字符返回
+                                10.4:  .substring(起始位置, 结束位置)  可以截取字符串的指定位置
+                                       .trim()  去掉字符串首尾的空格
+                                       .replace(原字符, 想改成的字符)  替换字符串中的某些字符
+                                       .startsWith(字符串)/.endsWith(字符串)  判断字符串是否以特定内容开始或结束
+                                       .equals(另一个字符串变量)  判断字符串是否相等，字符串比较不能使用==，因为==是比较地址 (.equalsIgnoreCase(另一个字符串变量)可以忽略大小写进行比较)
+                                       .compareTo(另一个)  按Unicode值进行比较，返回结果为正/负整数
+                                       .toUpperCase()/.toLowerCase()  将字符串中的字母转化为大写/小写
+                                       .split(分隔字符串的分隔符,分割的次数)  可以将字符串分隔
