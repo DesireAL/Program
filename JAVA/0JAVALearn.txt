@@ -98,6 +98,17 @@ day20 2023.02.07      java      8.3:   匿名内部类可以在最后的;前使�
                                        详见P140.ex3
 
 day21 2023.02.08      java      8.4:   Integer.parseInt("字符串")可以将字符串转换为int型
-                                       异常处理器:try-catch-finally 无论try语句块如何退出都将执行finally
+                                9.2:   异常处理器:try-catch-finally 无论try语句块如何退出都将执行finally
                                        try{程序代码块} catch(Exceptiontype1 e){对1的处理} catch....finally{程序代码块}
                                        e.printStackTrace();可以将错误报告打印到控制台  可以将Exceptiontype1改为指定异常
+
+day22 2023.02.10      java      9.4:   继承Exception类即可自定义异常类
+                                9.5:   throws关键字可以抛出用户自定义的异常信息
+                                       将该关键字添加进方法参数()之后 例 int avg(int a, int b) throws Exception    if判断出异常时使用throw new Exception("自定义信息");
+                                       Exception可以改名，且可被catch(Exception e)进行捕获  ，但改名后需新建如MyException类  详见P149与P151习题
+                                       int a = (int) b可以进行强制类型转换
+
+day23 2023.02.12      java      10.1:  可以用String s = new String(char a[], 起始位置, 截取长度); 来将字符或是其他列表中的内容转换为一个字符串
+                                       也可以用new String(a)直接将列表内的全部内容转化为字符串
+                                10.2:  可以用+来连接字符串与其他内容 String a = b + c;
+                                10.3:  .length()可以获取字符串长度  .indexOf()与.lastIndexOf()可以获取首次/末次出现的位置  .charAt(下标数)可以将指定下标的字符返回

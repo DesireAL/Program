@@ -37,7 +37,7 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;jdk.selected.JAVA_MODULE&quot;: &quot;11&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/Program/JAVA/Chapter8/src/P140/ex1&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Program/JAVA/Chapter9/src/P151/train6&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -45,17 +45,17 @@
     &quot;project.structure.last.edited&quot;: &quot;模块&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;File.Encoding&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Program\JAVA\Chapter9\src\P151\train6" />
       <recent name="D:\Program\JAVA\Chapter8\src\P140\ex1" />
       <recent name="D:\Program\JAVA\Chapter8\src\P140\train4" />
       <recent name="D:\Program\JAVA\Chapter8\src\P140\train3" />
       <recent name="D:\Program\JAVA\Chapter8\src" />
-      <recent name="D:\Program\JAVA\Chapter7\P132-7.9.1-train4\src" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\Program\JAVA\Chapter4" />
@@ -140,6 +140,8 @@
       <workItem from="1675765242360" duration="3834000" />
       <workItem from="1675781418326" duration="653000" />
       <workItem from="1675850288331" duration="2457000" />
+      <workItem from="1676036857128" duration="3603000" />
+      <workItem from="1676196423164" duration="874000" />
     </task>
     <servers />
   </component>
