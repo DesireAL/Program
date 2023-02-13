@@ -120,3 +120,13 @@ day23 2023.02.12      java      10.1:  可以用String s = new String(char a[], 
                                        .compareTo(另一个)  按Unicode值进行比较，返回结果为正/负整数
                                        .toUpperCase()/.toLowerCase()  将字符串中的字母转化为大写/小写
                                        .split(分隔字符串的分隔符,分割的次数)  可以将字符串分隔
+
+day24 2023.02.13      java      10.5:  日期/时间格式化:                                                常规类型格式化:
+                                                  import java.util.Date;                                            和日期时间相同，但不用调用Date
+                                                  Date date = new Date();                                           可以将结果转换为布尔类型/字符串类型/字符类型/十六进制类型等
+                                                  String 变量名 = String.format("格式字符串", date);
+                                                                                                      格式字符串详见P167
+                                10.6:  正则表达式:可以用来判断字符串是否满足某一格式,常用于判断语句中
+                                                 元字符与限定修饰符见P170
+                                10.7:  字符串生成器:定义需要经常改变的的字符串时可以使用StringBuilder来代替String
+                                                   .append(内容)添加内容    .insert(位置, 内容)向指定位置添加内容    .delete(起始位置, 结束位置)删除指定位置内容
