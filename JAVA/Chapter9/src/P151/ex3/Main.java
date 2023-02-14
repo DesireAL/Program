@@ -1,4 +1,4 @@
-package P151.train3;
+package P151.ex3;
 
 public class Main {
     public static void main(String args[]) {

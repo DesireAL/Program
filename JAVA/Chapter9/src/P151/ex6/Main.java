@@ -1,4 +1,4 @@
-package P151.train6;
+package P151.ex6;
 import java.util.Scanner;
 
 /*class MyException extends Exception{

@@ -1,4 +1,4 @@
-package P151.train8;
+package P151.ex8;
 
 public class Computer {
     public static int getMaxComm(int m, int n) throws Exception {
