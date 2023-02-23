@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<Project>
+  <Desktop>
+    <Static>
+      <Workspace>
+        <ColumnWidths>
+          
+          
+          
+          
+        <Column0>93</Column0><Column1>27</Column1><Column2>27</Column2><Column3>27</Column3></ColumnWidths>
+      </Workspace>
+      <Disassembly>
+        
+        
+        
+      <CodeCovEnabled>0</CodeCovEnabled><MixedMode>1</MixedMode><CodeCovShow>0</CodeCovShow><InstrProfShow>0</InstrProfShow></Disassembly>
+      <Debug-Log><ColumnWidth0>25</ColumnWidth0><ColumnWidth1>1302</ColumnWidth1></Debug-Log>
+      <Build>
+        
+        
+        
+        
+      <ColumnWidth0>20</ColumnWidth0><ColumnWidth1>1035</ColumnWidth1><ColumnWidth2>276</ColumnWidth2><ColumnWidth3>69</ColumnWidth3></Build>
+    <Watch><Format><struct_types/><watch_formats/></Format><Column0>100</Column0><Column1>100</Column1><Column2>100</Column2><Column3>100</Column3></Watch></Static>
+    <Windows>
+      
+      
+      
+    <Wnd2>
+        <Tabs>
+          <Tab>
+            <Identity>TabID-20256-29324</Identity>
+            <TabName>Workspace</TabName>
+            <Factory>Workspace</Factory>
+            <Session>
+              
+            <NodeDict><ExpandedNode>Exp</ExpandedNode></NodeDict></Session>
+          </Tab>
+        </Tabs>
+        
+      <SelectedTab>0</SelectedTab></Wnd2><Wnd3>
+        <Tabs>
+          <Tab>
+            <Identity>TabID-8985-29331</Identity>
+            <TabName>Debug Log</TabName>
+            <Factory>Debug-Log</Factory>
+            <Session/>
+          </Tab>
+          <Tab>
+            <Identity>TabID-19734-29334</Identity>
+            <TabName>Build</TabName>
+            <Factory>Build</Factory>
+            <Session/>
+          </Tab>
+        </Tabs>
+        
+      <SelectedTab>0</SelectedTab></Wnd3><Wnd6><Tabs><Tab><Identity>TabID-8883-27460</Identity><TabName>Disassembly</TabName><Factory>Disassembly</Factory><Session/></Tab></Tabs><SelectedTab>0</SelectedTab></Wnd6><Wnd7><Tabs><Tab><Identity>TabID-121-28443</Identity><TabName>Watch</TabName><Factory>Watch</Factory><Session><Expressions/><TabId>0</TabId><Column0>100</Column0><Column1>100</Column1><Column2>100</Column2><Column3>100</Column3></Session></Tab></Tabs><SelectedTab>0</SelectedTab></Wnd7></Windows>
+    <Editor>
+      
+      
+      
+      
+    <Pane/><ActivePane>0</ActivePane><Sizes><Pane><X>1000000</X><Y>1000000</Y></Pane></Sizes><SplitMode>1</SplitMode></Editor>
+    <Positions>
+      
+      
+      
+      
+      
+    <Top><Row0><Sizes><Toolbar-04ad1478><key>iaridepm.enu1</key></Toolbar-04ad1478></Sizes></Row0><Row1><Sizes><Toolbar-04b31388><key>debuggergui.enu1</key></Toolbar-04b31388></Sizes></Row1></Top><Left><Row0><Sizes><Wnd2><Rect><Top>-2</Top><Left>-2</Left><Bottom>623</Bottom><Right>167</Right><x>-2</x><y>-2</y><xscreen>169</xscreen><yscreen>182</yscreen><sizeHorzCX>118680</sizeHorzCX><sizeHorzCY>208716</sizeHorzCY><sizeVertCX>118680</sizeVertCX><sizeVertCY>716743</sizeVertCY></Rect></Wnd2></Sizes></Row0></Left><Right><Row0><Sizes><Wnd6><Rect><Top>-2</Top><Left>-2</Left><Bottom>623</Bottom><Right>358</Right><x>-2</x><y>-2</y><xscreen>360</xscreen><yscreen>349</yscreen><sizeHorzCX>252809</sizeHorzCX><sizeHorzCY>400229</sizeHorzCY><sizeVertCX>252809</sizeVertCX><sizeVertCY>716743</sizeVertCY></Rect></Wnd6></Sizes></Row0><Row1><Sizes><Wnd7><Rect><Top>-2</Top><Left>356</Left><Bottom>623</Bottom><Right>716</Right><x>356</x><y>-2</y><xscreen>360</xscreen><yscreen>349</yscreen><sizeHorzCX>252809</sizeHorzCX><sizeHorzCY>400229</sizeHorzCY><sizeVertCX>252809</sizeVertCX><sizeVertCY>716743</sizeVertCY></Rect></Wnd7></Sizes></Row1></Right><Bottom><Row0><Sizes><Wnd3><Rect><Top>-2</Top><Left>-2</Left><Bottom>180</Bottom><Right>1426</Right><x>-2</x><y>-2</y><xscreen>1428</xscreen><yscreen>182</yscreen><sizeHorzCX>1002809</sizeHorzCX><sizeHorzCY>208716</sizeHorzCY><sizeVertCX>118680</sizeVertCX><sizeVertCY>208716</sizeVertCY></Rect></Wnd3></Sizes></Row0></Bottom><Float><Sizes/></Float></Positions>
+  </Desktop>
+</Project>
+
+

@@ -61,7 +61,7 @@
       <recent name="D:\Program\JAVA\Chapter4" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="应用程序.First">
     <configuration name="First" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Number.First" />
       <module name="P32-3.1.1-ex3.1" />
@@ -144,6 +144,7 @@
       <workItem from="1676196423164" duration="874000" />
       <workItem from="1676384319064" duration="2155000" />
       <workItem from="1676560791683" duration="549000" />
+      <workItem from="1677154485278" duration="604000" />
     </task>
     <servers />
   </component>

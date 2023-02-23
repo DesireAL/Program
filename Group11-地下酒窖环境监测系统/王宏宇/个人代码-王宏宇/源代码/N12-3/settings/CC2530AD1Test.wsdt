@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<Workspace>
+  <ConfigDictionary>
+    
+    
+    
+  <CurrentConfigs><Project>CC2530AD1Test/Debug</Project></CurrentConfigs></ConfigDictionary>
+  <Desktop>
+    <Static>
+      <Workspace>
+        <ColumnWidths>
+          
+          
+          
+          
+        <Column0>125</Column0><Column1>27</Column1><Column2>27</Column2><Column3>27</Column3></ColumnWidths>
+      </Workspace>
+      <Build>
+        
+        
+        
+        
+      <ColumnWidth0>20</ColumnWidth0><ColumnWidth1>915</ColumnWidth1><ColumnWidth2>244</ColumnWidth2><ColumnWidth3>61</ColumnWidth3></Build>
+      <TerminalIO/>
+    <Debug-Log><ColumnWidth0>22</ColumnWidth0><ColumnWidth1>1305</ColumnWidth1></Debug-Log></Static>
+    <Windows>
+      
+      
+    <Wnd0>
+        <Tabs>
+          <Tab>
+            <Identity>TabID-4738-7850</Identity>
+            <TabName>Workspace</TabName>
+            <Factory>Workspace</Factory>
+            <Session>
+              
+            <NodeDict><ExpandedNode>CC2530AD1Test</ExpandedNode><ExpandedNode>CC2530AD1Test/CC2530AD1Test.c</ExpandedNode><ExpandedNode>CC2530AD1Test/Output</ExpandedNode></NodeDict></Session>
+          </Tab>
+        </Tabs>
+        
+      <SelectedTab>0</SelectedTab></Wnd0><Wnd1>
+        <Tabs>
+          <Tab>
+            <Identity>TabID-18915-7994</Identity>
+            <TabName>Build</TabName>
+            <Factory>Build</Factory>
+            <Session/>
+          </Tab>
+        <Tab><Identity>TabID-11188-6559</Identity><TabName>Debug Log</TabName><Factory>Debug-Log</Factory><Session/></Tab></Tabs>
+        
+      <SelectedTab>0</SelectedTab></Wnd1></Windows>
+    <Editor>
+      
+      
+      
+      
+    <Pane><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\CC2530AD1Test.c</Filename><XPos>0</XPos><YPos>15</YPos><SelStart>845</SelStart><SelEnd>859</SelEnd></Tab><ActiveTab>0</ActiveTab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\include\initUART_Timer.h</Filename><XPos>0</XPos><YPos>85</YPos><SelStart>2555</SelStart><SelEnd>2555</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\LCD.h</Filename><XPos>0</XPos><YPos>146</YPos><SelStart>6530</SelStart><SelEnd>6530</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\codetab.h</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>4581</SelStart><SelEnd>4581</SelEnd></Tab></Pane><ActivePane>0</ActivePane><Sizes><Pane><X>1000000</X><Y>1000000</Y></Pane></Sizes><SplitMode>1</SplitMode></Editor>
+    <Positions>
+      
+      
+      
+      
+      
+    <Top><Row0><Sizes><Toolbar-05cf1278><key>iaridepm.enu1</key></Toolbar-05cf1278></Sizes></Row0></Top><Left><Row0><Sizes><Wnd0><Rect><Top>-2</Top><Left>-2</Left><Bottom>396</Bottom><Right>199</Right><x>-2</x><y>-2</y><xscreen>201</xscreen><yscreen>316</yscreen><sizeHorzCX>209812</sizeHorzCX><sizeHorzCY>307393</sizeHorzCY><sizeVertCX>209812</sizeVertCX><sizeVertCY>387160</sizeVertCY></Rect></Wnd0></Sizes></Row0></Left><Right><Row0><Sizes/></Row0></Right><Bottom><Row0><Sizes><Wnd1><Rect><Top>-2</Top><Left>-2</Left><Bottom>587</Bottom><Right>960</Right><x>-2</x><y>-2</y><xscreen>962</xscreen><yscreen>589</yscreen><sizeHorzCX>1004175</sizeHorzCX><sizeHorzCY>572957</sizeHorzCY><sizeVertCX>209812</sizeVertCX><sizeVertCY>307393</sizeVertCY></Rect></Wnd1></Sizes></Row0></Bottom><Float><Sizes/></Float></Positions>
+  </Desktop>
+</Workspace>
+
+
