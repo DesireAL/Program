@@ -146,7 +146,7 @@ day27 2024.02.19      java      11.2:  数字格式化: java.text.DecimalFormat;
                                                         使用时调用output                                                        使用时调用myFormat.format(变量(数据))
                                                  特殊方法如:myFormat.setGroupingSize(x);   myFormat.setGroupingUsed(false);    可以实现数字分组
                                        数学方法: 可以通过 Math.数学方法名 来使用 如Math.sin(Math.Pi/2);
-                                       包括Pi,E,三角函数,指数函数,取整函数,取最大值、最小值、绝对值函数等。
+                                       包括Pi,E,三角函数,指数函数,取整函数,取最大值、最小值、绝对值函数等。P185
                                        随机数: java.util.Random; 常用方法见P189
 
 day28 2024.02.21      java      11.2:  java.math.BigInterger; 处理大整数运算   常用加减乘除等见P190
@@ -175,3 +175,31 @@ day29 2024.02.23      java      11.5:  Date类:
                                                 ... ...{
                                                         DateFormat df = new SimpleDateFormat("yyyy.MM.dd");
                                                         System.out.println(df.format(new Date()));}
+
+day30 2024.02.25      java      11.5:  Calendar类(日历类):
+                                                         主要用于自定义时间, Date与Calendar的区别(https://blog.csdn.net/weixin_44589334/article/details/89975515)
+                                                         常用的字段及方法见P202    日期转换格式可见P203 train10
+                                       Runtime类:
+                                                 Runtime.getRuntime().exec("javac hello.java");   可以在运行环境中执行cmd/shell命令
+                                                 或 String command[] = {"javac", "hello.java"};
+                                                    Runtime.getRuntime().exec(command);
+                                                 其他用法见P204
+
+day31 2024.02.26      java      11.6:  Calendar c = Calendar.getInstance();
+                                       int year = c.get(Calendar.YEAR);   获取当前年, 其他同理
+                                       int month = c.get(Calendar.MONTH) + 1;   获取的月从零开始所以需要+1
+                                       c.add(Calendar.MONTH, 1);    当前月份+1, 为下一条代码做准备
+                                       c.set(Calendar.DAY_OF_MONTH, 0);   获取上个月的最后一天(上一条加了一月，所以是这个月的最后一天)
+                                       int dayCount = c.get(Calendar.DAY_OF_MONTH);   设置本月最多天数
+                                       c.set(Calendar.DAY_OF_MONTH, 1);   设置本月为第一天
+                                       int week = c.get(Calendar.DAY_OF_WEEK);    设置第一天为星期X
+
+                                12.2:  Collection接口:                                                                        遍历例子
+                                                      .add()将指定对象添加到该集合                                             import java.util.*;
+                                                      .remove()将指定对象从该集合中删除                                        ...    类-方法
+                                                      .isEmpty()返回布尔值, 判断是否为空                                       Collection<String> list = new ArrayList<>();
+                                                      .iterator()返回迭代器, 用于遍历对象                                      ...    向集合添加数据(list.add("");)
+                                                      .size()返回int值, 获取元素个数                                           lterator<String> it = list.iterator();
+                                                      List/Set继承Collection, 所以方法对这俩也通用                              while(it.hasNext()){
+                                                                                                                                  String str = (String) it.next();
+                                                                                                                                  System.out.println(str);}
