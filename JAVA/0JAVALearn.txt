@@ -203,3 +203,5 @@ day31 2024.02.26      java      11.6:  Calendar c = Calendar.getInstance();
                                                       List/Set继承Collection, 所以方法对这俩也通用                              while(it.hasNext()){
                                                                                                                                   String str = (String) it.next();
                                                                                                                                   System.out.println(str);}
+
+——————————————————————————————研究一下毕设的QT和C++——————————————————————————————

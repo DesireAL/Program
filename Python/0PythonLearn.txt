@@ -133,3 +133,12 @@ day31 2022.12.11	 python			ex5:cat命令 →做新项目时的启动能力与阻
 															ex13:链表 尝试设计python中的list和其的功能指令  .count查找字符串出现的次数
 															ex14:双链表
 															又修复了一下自制程序的一些bug  研究了一下GitHub
+
+			2023.03.29	 python			names = ["Alice", "Bob", "Carl"]									可以替代for i in range(len(names)):
+															for index,value in enumerate(names):												print(f'{i}: {names[i]}')
+																print(f'{index}: {value}')
+
+															enmuerate(li, 1) 可以将上述代码的0 1 2更改为1 2 3
+															list(range(x))可以直接创建x位数的列表
+															index为线性查找
+															li[j], li[j+1] = li[j+1], li[j] 可以同时交换两个数
