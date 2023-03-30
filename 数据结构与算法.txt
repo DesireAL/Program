@@ -79,7 +79,7 @@
                       while li[j] > tmp and j >= 0:
                           li[j+1] = li[j]
                           j -= 1
-                      j[j+1] = tmp    时间复杂度: O(n^2)
+                      li[j+1] = tmp    时间复杂度: O(n^2)
 
 
               快速排序: 取一个元素p(第一个元素)，使元素p归为；
