@@ -34,7 +34,7 @@ day5 2022.10.28		 python			ex24:"".format()另一种格式字符串的方式  va
 									 						ex28:布尔表达式练习
 									 						ex29:if语句 #为什么这一节的习题会出现在ex26中？
 									 						ex30:else 和 if语句
-									 						ex31:一个小游戏if-elif-else练习的小游戏  判断取值可以用1 < x < 10或是x in range(1,10)(1~9)
+									 						ex31:一个小游戏if-elif-else练习的小游戏  判断取值可以用1 < x < 10或是x in range(1,10)(1~9)		range(起始数，结束数，步长)
 									 						ex32:列表list = [1, 2, 3, "a", "b", "c"]   list.append(i)将整体i加入列表list  for i in x for循环
 									 						     list.extend(i)将i的内容分散添加  list.insert(1, i)将i添加在位置1  in/not in存在/不存在则返回True
 									 								 del list[i]/list.pop(i)删除/弹出位置i字符  list.remove(元素名)从左删除元素  list.sort()排序  list.reverse()倒序  list2 = sorted(list, reverse = True)(默认False)
@@ -151,3 +151,47 @@ day34 2023.03.31   python			id(变量名)可以看到物理地址(内存地址)
 															ctrl D = 在输入上一行代码
 															ctrl ? = 注释掉选中的所有行
 															str.center(总字节数,'填充的字符')
+															树与二叉树:一种数据结构, 如目录结构
+																				数是一种可以递归定义的数据结构
+																				根节点:最上层的节点		叶子节点:最下层的节点
+																				深度/高度:最深有几层		树的度:最多的分叉个数
+																				孩子节点/父节点:字面意思		子树:下一级的所有节点(包括节点的节点)
+																	二叉树:每个节点最多有两个子节点(左节点/右节点)
+																满二叉树:每个节点均有两个子节点
+															完全二叉树:在满二叉树的基础上最下一层从右向左缺失(满二叉树为特殊的完全二叉树)
+																				父节点为i位时, 左节点是父节点的2i+1 右节点即为2i+2
+																				左/右节点为i时, 父节点为(i-1or2)/2
+
+															堆排序:
+																		大根堆:完全二叉树下，任一节点都比其子节点大(父比子大)
+																		小根堆:完全二叉树下，任一节点都比其子节点小(父比子小)
+																		向下调整:当根节点的左右子树都是堆时，可以通过一次向下调整使其成为堆
+																		过程1.建立堆
+																			  2.得到堆顶元素为最大元素
+																				3.去掉堆顶，将堆最后一个元素放到堆顶，进行向下调整
+																				4.堆顶元素为第二大元素
+																				5.重复步骤3，直到堆变空
+																		def sift(li, low, high):		# low为第一个数，high为最后一个数
+																				i = low		# 最开始指向根节点(tmp要去的位置)
+																				j = 2 * i + 1		# 左节点
+																				tmp = li[low]		# 把堆顶i位置的数存起来
+																				while j <= high:		# j位置有数则继续循环
+																						if j + 1 <= high and li[j+1] > li[j]:		# 存在右节点且比左大
+																								j = j+1		# j指向右节点
+																						if li[j] > tmp:
+																								li[i] = li[j]
+																								i = j			# i与j往下一层
+																								j = 2 * i + 1
+																						else:		# tmp更大，将tmp放到i的位置上
+																								li[i] = tmp		# 将tmp放到某一父节点
+																								break
+																				else:
+																						li[i] = tmp		# j越界后，将tmp放到子节点(可以删掉两次与else直接在循环外执行一次)
+
+																		def heap_sort(li):
+																				n = len(li)
+																				for i in range((n-2)//2, -1 -1):
+																						sift(li, i, n-1)
+																				for i in range(n-1, -1, -1):
+																						li[0], li[i] = li[i], li[0]
+																						sift(li, 0, i - 1)		# i-1是新的high
