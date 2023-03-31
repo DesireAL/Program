@@ -37,7 +37,7 @@ day5 2022.10.28		 python			ex24:"".format()另一种格式字符串的方式  va
 									 						ex31:一个小游戏if-elif-else练习的小游戏  判断取值可以用1 < x < 10或是x in range(1,10)(1~9)
 									 						ex32:列表list = [1, 2, 3, "a", "b", "c"]   list.append(i)将整体i加入列表list  for i in x for循环
 									 						     list.extend(i)将i的内容分散添加  list.insert(1, i)将i添加在位置1  in/not in存在/不存在则返回True
-									 								 del list[i]/list.pop(i)删除/弹出位置i字符  list.remove(i)删除元素i  list.sort()排序  list.reverse()倒序  list2 = sorted(list, reverse = True)(默认False)
+									 								 del list[i]/list.pop(i)删除/弹出位置i字符  list.remove(元素名)从左删除元素  list.sort()排序  list.reverse()倒序  list2 = sorted(list, reverse = True)(默认False)
 
 day6 2022.10.29    python			ex33:while循环
 									 						ex34:列表的元素位置  0为正数第一个 -1为倒数第一个
@@ -75,7 +75,7 @@ day8-15 2022.10.31 python 		ex44:隐式继承 显式覆盖 super重写扩展   �
 day16 2022.11.18	 python			ex46:创建虚拟环境 .\activate进入虚拟环境 制作项目骨架
 															ex47:assert断言函数(https://www.cnblogs.com/llsix/p/8474322.html)  .update({a: b})更新字典
 															ex48:用户输入进阶  元组(tuple)不能修改的列表  isdigit只对字符串起作用
-																	 大小写转换 例如.lower()(https://blog.csdn.net/cw7600/article/details/126612352)
+																	 大小写转换 例如.lower() .upper()(https://blog.csdn.net/cw7600/article/details/126612352)
 															ex49:创建句子 感觉和ex48用处不大，暂时跳过
 
 
@@ -134,7 +134,7 @@ day31 2022.12.11	 python			ex5:cat命令 →做新项目时的启动能力与阻
 															ex14:双链表
 															又修复了一下自制程序的一些bug  研究了一下GitHub
 
-			2023.03.29	 python			names = ["Alice", "Bob", "Carl"]									可以替代for i in range(len(names)):
+day32	2023.03.29	 python			names = ["Alice", "Bob", "Carl"]									可以替代for i in range(len(names)):
 															for index,value in enumerate(names):												print(f'{i}: {names[i]}')
 																print(f'{index}: {value}')
 
@@ -142,3 +142,12 @@ day31 2022.12.11	 python			ex5:cat命令 →做新项目时的启动能力与阻
 															list(range(x))可以直接创建x位数的列表
 															index为线性查找
 															li[j], li[j+1] = li[j+1], li[j] 可以同时交换两个数
+
+day33 2023.03.30   python     四种算法:冒泡、选择、插入、快速
+
+day34 2023.03.31   python			id(变量名)可以看到物理地址(内存地址)
+															python解释器也自带垃圾回收器,可以回收无用的内存地址
+															name2 = name时是指向name的内存地址，不会生成新地址
+															ctrl D = 在输入上一行代码
+															ctrl ? = 注释掉选中的所有行
+															str.center(总字节数,'填充的字符')

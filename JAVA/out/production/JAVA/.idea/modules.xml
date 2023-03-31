@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Chapter10/Chapter10.iml" filepath="$PROJECT_DIR$/Chapter10/Chapter10.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Chapter11/Chapter11.iml" filepath="$PROJECT_DIR$/Chapter11/Chapter11.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Chapter3/Chapter3.iml" filepath="$PROJECT_DIR$/Chapter3/Chapter3.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Chapter4/Chapter4.iml" filepath="$PROJECT_DIR$/Chapter4/Chapter4.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Chapter5/Chapter5.iml" filepath="$PROJECT_DIR$/Chapter5/Chapter5.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Chapter6/Chapter6.iml" filepath="$PROJECT_DIR$/Chapter6/Chapter6.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Chapter7/Chapter7.iml" filepath="$PROJECT_DIR$/Chapter7/Chapter7.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Chapter8/Chapter8.iml" filepath="$PROJECT_DIR$/Chapter8/Chapter8.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Chapter9/Chapter9.iml" filepath="$PROJECT_DIR$/Chapter9/Chapter9.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/JAVA.iml" filepath="$PROJECT_DIR$/.idea/JAVA.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Chapter6/P110-6.7.1-train2/P110-6.7.1-train2.iml" filepath="$PROJECT_DIR$/Chapter6/P110-6.7.1-train2/P110-6.7.1-train2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Chapter6/P111-6.7.1-train3/P111-6.7.1-train3.iml" filepath="$PROJECT_DIR$/Chapter6/P111-6.7.1-train3/P111-6.7.1-train3.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Chapter6/P111-6.7.1-train5/P111-6.7.1-train5.iml" filepath="$PROJECT_DIR$/Chapter6/P111-6.7.1-train5/P111-6.7.1-train5.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Chapter6/P111-6.7.1-train7/P111-6.7.1-train7.iml" filepath="$PROJECT_DIR$/Chapter6/P111-6.7.1-train7/P111-6.7.1-train7.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Chapter6/P111-6.7.1-train8/P111-6.7.1-train8.iml" filepath="$PROJECT_DIR$/Chapter6/P111-6.7.1-train8/P111-6.7.1-train8.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Chapter7/P114-7.1.1-train1/P114-7.1.1-train1.iml" filepath="$PROJECT_DIR$/Chapter7/P114-7.1.1-train1/P114-7.1.1-train1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Chapter7/P117-7.2.1-train4/P117-7.2.1-train4.iml" filepath="$PROJECT_DIR$/Chapter7/P117-7.2.1-train4/P117-7.2.1-train4.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Chapter7/P120-7.3.2-train6/P120-7.3.2-train6.iml" filepath="$PROJECT_DIR$/Chapter7/P120-7.3.2-train6/P120-7.3.2-train6.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Chapter7/P124-7.5.1-train9/P124-7.5.1-train9.iml" filepath="$PROJECT_DIR$/Chapter7/P124-7.5.1-train9/P124-7.5.1-train9.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Chapter7/P126-7.6.3-train11/P126-7.6.3-train11.iml" filepath="$PROJECT_DIR$/Chapter7/P126-7.6.3-train11/P126-7.6.3-train11.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Chapter7/P127-7.7.1-train13/P127-7.7.1-train13.iml" filepath="$PROJECT_DIR$/Chapter7/P127-7.7.1-train13/P127-7.7.1-train13.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Chapter7/P131-7.9.1-train1/P131-7.9.1-train1.iml" filepath="$PROJECT_DIR$/Chapter7/P131-7.9.1-train1/P131-7.9.1-train1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Chapter7/P132-7.9.1-train2/P132-7.9.1-train2.iml" filepath="$PROJECT_DIR$/Chapter7/P132-7.9.1-train2/P132-7.9.1-train2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Chapter7/P132-7.9.1-train3/P132-7.9.1-train3.iml" filepath="$PROJECT_DIR$/Chapter7/P132-7.9.1-train3/P132-7.9.1-train3.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Chapter7/P132-7.9.1-train4/P132-7.9.1-train4.iml" filepath="$PROJECT_DIR$/Chapter7/P132-7.9.1-train4/P132-7.9.1-train4.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Chapter7/P133-7.9.1-train5/P133-7.9.1-train5.iml" filepath="$PROJECT_DIR$/Chapter7/P133-7.9.1-train5/P133-7.9.1-train5.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Chapter3/P32-3.1.1-ex3.1/P32-3.1.1-ex3.1.iml" filepath="$PROJECT_DIR$/Chapter3/P32-3.1.1-ex3.1/P32-3.1.1-ex3.1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Chapter3/P38-3.2.4-train1/P38-3.2.4-train1.iml" filepath="$PROJECT_DIR$/Chapter3/P38-3.2.4-train1/P38-3.2.4-train1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Chapter3/P43-3.3.4-train4/P43-3.3.4-train4.iml" filepath="$PROJECT_DIR$/Chapter3/P43-3.3.4-train4/P43-3.3.4-train4.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Chapter3/P44-3.4.2-ex3.8/P44-3.4.2-ex3.8.iml" filepath="$PROJECT_DIR$/Chapter3/P44-3.4.2-ex3.8/P44-3.4.2-ex3.8.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Chapter3/P50-3.4.8-train6/P50-3.4.8-train6.iml" filepath="$PROJECT_DIR$/Chapter3/P50-3.4.8-train6/P50-3.4.8-train6.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Chapter3/P55-3.7.1-train8/P55-3.7.1-train8.iml" filepath="$PROJECT_DIR$/Chapter3/P55-3.7.1-train8/P55-3.7.1-train8.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Chapter4/P68-4.4.1-ex4.10/P68-4.4.1-ex4.10.iml" filepath="$PROJECT_DIR$/Chapter4/P68-4.4.1-ex4.10/P68-4.4.1-ex4.10.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Chapter4/P70-4.5.1-train1/P70-4.5.1-train1.iml" filepath="$PROJECT_DIR$/Chapter4/P70-4.5.1-train1/P70-4.5.1-train1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Chapter4/P71-4.5.1-train4/P71-4.5.1-train4.iml" filepath="$PROJECT_DIR$/Chapter4/P71-4.5.1-train4/P71-4.5.1-train4.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Chapter5/P75-5.2.3-train2/P75-5.2.3-train2.iml" filepath="$PROJECT_DIR$/Chapter5/P75-5.2.3-train2/P75-5.2.3-train2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Chapter5/P77-5.3.3-train3/P77-5.3.3-train3.iml" filepath="$PROJECT_DIR$/Chapter5/P77-5.3.3-train3/P77-5.3.3-train3.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Chapter5/P84-5.4.5-train6/P84-5.4.5-train6.iml" filepath="$PROJECT_DIR$/Chapter5/P84-5.4.5-train6/P84-5.4.5-train6.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Chapter5/P85-5.5.1-ex5.12/P85-5.5.1-ex5.12.iml" filepath="$PROJECT_DIR$/Chapter5/P85-5.5.1-ex5.12/P85-5.5.1-ex5.12.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Chapter5/P87-5.5.2-ex5.13/P87-5.5.2-ex5.13.iml" filepath="$PROJECT_DIR$/Chapter5/P87-5.5.2-ex5.13/P87-5.5.2-ex5.13.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Chapter5/P89-5.6.1-train1/P89-5.6.1-train1.iml" filepath="$PROJECT_DIR$/Chapter5/P89-5.6.1-train1/P89-5.6.1-train1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Chapter5/P89-5.6.1-train2/P89-5.6.1-train2.iml" filepath="$PROJECT_DIR$/Chapter5/P89-5.6.1-train2/P89-5.6.1-train2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Chapter5/P89-5.6.1-train3/P89-5.6.1-train3.iml" filepath="$PROJECT_DIR$/Chapter5/P89-5.6.1-train3/P89-5.6.1-train3.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Chapter5/P89-5.6.1-train4/P89-5.6.1-train4.iml" filepath="$PROJECT_DIR$/Chapter5/P89-5.6.1-train4/P89-5.6.1-train4.iml" />
+    </modules>
+  </component>
+</project>

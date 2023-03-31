@@ -1,0 +1,207 @@
+day01 2022.12.13      java      安装了2022.3版本的IDEL 安装了OracleJDK11，配置了环境变量，不过IDEL似乎不需要自己更改环境变量，若使用Eclipse则需要
+                                点击行数旁边可设置断点，右键断点可进行编辑
+                                ex3.1: static的用法(https://blog.csdn.net/Ambition_ZM/article/details/101705741)
+
+day02 2022.12.14      java      ex3.1: 类的属性为全局变量(s1)，方法中的属性为局部变量(s2)
+                                       print()输出完毕后不换行，而println()输出完毕后会换行  char用于储存单个字符 String用于储存字符串 " "表示字符串 ' '表示单个字符 char x='a'
+                                       char与int可以通过Unicode相互转换  在println中可以使用(int)word来让word变为整数型  boolean定义布尔类型
+
+day03 2022.12.15      java      3.2:   整明白了IDEA中项目与模块的关系，重新创建了JAVA项目  python的**与//运算符无法在java中使用，若想要进行幂运算需要使用Math.pow(底数，指数)
+                                       long型需要在数的后面加上L/l  float型需要在数的后面加上F/f  可以使用<final 数据类型 常量名称 [= 值]>声明常量，且必须在定义时就设置初值
+                                3.3:   在类体中声明的变量为乘员变量，乘员变量在整个类中都有效(全局)  在类的方法体中声明的变量为局部变量，只在当前代码块中有效
+                                       乘员变量前加static即为静态变量(类变量)，可以通过类名.静态变量进行跨类使用，否则即为实例变量
+                                       一个java文件可以有多个类，但只能有一个public类，且需要与文件名一致(类似于main()) 所以java文件中的其他类是为public类做修饰的
+
+day04 2022.12.16      java      3.4:   import java.util.Scanner;调用扫描器  使用Scanner 变量 = new Scanner(System.in);创建扫描器，获取控制台输入的值  使用 变量.next数据类型()来接收数值/字符串
+                                       nextline()接收字符串遇到空格时不会停止 next()遇到空格时会停止    三元运算:boolean b=1>2?true:false 若1>2则b为true，否则为false，可换成其他数据类型
+                                       b = ++a 先将a的值+1，然后赋给b  b = a++ 先将a的值赋给b，然后a的值+1  &&逻辑与(and) ||逻辑或(or)
+                                3.5:   隐式/显示类型转换
+                                3.6:   //单行注释   /*  */多行注释   /**  */文档注释
+
+day05 2022.12.17      java      4.1:   { }复合语句，可以在里面创建临时变量
+                                4.2:   if(布尔表达式){语句序列} else if(){} else{}  if语句格式
+                                       switch(表达式){case 常量值1: 语句块1; break; ... default: 语句块n; break;}   switch语句格式 case后不能为非整数的实数，没写语句块的case会使用下一个语句块。
+                                4.3:   while(语句表达式){语句序列}  do{语句序列}while(语句表达式);  for(表达式1;表达式2;表达式3){语句序列} 1:变量初始化 2:循环条件 3:改变变量  两种循环
+                                       for(元素类型x:遍历对象obj){引用了x的java语句;}  foreach语句(和python中的for i in x差不多?)
+
+day06 2022.12.18      java      4.4：  break中断循环  continue立刻执行下一次循环  标签名: 循环体+break 标签名中断外层循环(continue用法与break相同)
+                                4.5：  String a = String.valueOf(x)可以将x转换为字符串形式
+
+day07 2022.12.19      java      5.2:   类型 数组名[]; 创建数组 + 数组名=new 类型[元素个数]; 分配内存空间    数组初始化例:int arr[]={11,25,37,42,678};
+                                       以上两条可以合并成: 类型 数组名[]=new 类型[元素个数];                          int arr[]=new int[]{11,25,37,42,678};
+                                5.3:   .length可以判断长度    二维数组与一维相似int arr[]=new int[2][4]                int arr[][]={{0,1}{0,1}};
+                                5.4:   import java.util.Arrays Arrays.fill(数组名, 起始位置, 结束位置, 元素2); 可将数组中指定位置的元素1替换为元素2,不填起始与结束位置则为全部
+                                       Arrays.sort(数组名); 可对数组进行升序排序  Arrays.copyOf(数组名,长度);和Arrays.copyOfRange(数组名,起始位置,结束位置);可复制数组中元素
+                                       Arrays.binarySearch(数组名,起始位置,结束位置,key); 可在数组中查找key,并返回索引值 (使用前最好进行排序,不指定位置则为全部位置)
+
+day08 2022.12.22      java      5.5:   冒泡排序:依次进行比大小(1和2,1和3,1和4...)
+                                       直接选择排序:从目标中直接选出想要的进行排序
+                                       反转排序:前后顺序颠倒
+                                5.6:   sc.next().charAt(0)可以接收字符串
+
+day09 2022.12.24      java      6.1:   面向对象
+                                6.2:   类 private 类型 名字;可以创建私有成员变量   成员方法的语法格式:权限修饰符 (void(无返回值)) 返回值类型 方法名(参数类型 参数名){方法体;  return 返回值;}
+                                       权限修饰符的具体说明见书P97 (不填写权限修饰符时默认为protected)
+                                       this可以调用成员变量和成员方法
+
+day10 2022.12.25      java      6.3:   类的构造方法:1.没有返回值 2.名称要与本类名称相同
+                                6.4:   static{...}静态代码块，在执行类时(只)会被执行一次
+                                       注意几点:1.静态方法中不可以使用this    2.静态方法中不可以调用非静态方法    3.局部变量不可以使用static    4.主方法必须用static    5.只有内部类可以使用static
+                                6.5:   主方法的行参是数组，所以是String[] args的形式，可以用args.length获取参数的个数
+                                6.6:   通过new来创建对象,每实例化一个对象就会自动调用一次构造方法(和python相同)    类名 对象的引用变量=new 类名(参数) 使用引用变量进行调用参数(d1.xxx)
+                                       java的垃圾回收 finalize()跳过一次回收 System.gc()强制进行一次垃圾回收
+
+day11 2023.01.11      java      6.6:   习题
+
+day12 2023.01.13      java      7.1:   单继承:class Child extends Parent{}   子类可以调用父类的属性和方法
+                                7.2:   Objext类:getClass()返回对象执行时的Class实例   toString()将一个对象返回为字符串形式，通常会进行重写P115   equals()比较两个对象的实际内容
+
+day13 2023.01.14      java      7.3:   向上转型:父类 父类对象 = new 子类(); People tom = new teacher();   父类的对象无法调用子类独有的属性或者方法。安全
+                                       向下转型:子类 子类对象 = (子类) 父类对象; Pigeon pigeon = (Pigeon) bird;   父类对象要先引用这个子类对象。不安全
+                                7.4:   instanceof 左边的对象是否是它右边的类的实例，返回 boolean 的数据类型 当s为Square类时 System.out.println(s instanceof Quadrangle)会输出true
+
+day14 2023.01.16      java      7.5:   方法的重载:参数的顺序/类型/数量不同，即可构成重载  定义不定长参数可以使用 返回值类型 方法名(参数类型...参数名称)<public static int add(int...a){}>
+                                       编译器会将int...a看做是int[]a
+                                7.6:   final关键字:
+                                                  final定义的变量不可被更改
+                                                  final定义的方法可以防止子类修改父类的定义与实现方式(private与其相同，所以无需定义private后再定义为final)
+                                                  final定义的类不能被继承
+
+day15 2023.01.18      java      7.7:   多态:习题
+                                7.8:   抽象abstract:abstract class 类名{} 该关键字可以定义抽象类与抽象方法，承载抽象方法的抽象类必须被继承
+                                       接口interface:该关键字可以定义接口,可以将xx方法封装到接口中，使需要xx方法的的类实现这个接口，同时继承抽象类
+                                       继承父类的同时实现一个接口:class 子类 extends 父类 implements 接口{}
+                                       一个接口可以继承另一个接口:interface 子接口 extends 父接口
+                                       public与static的理解(https://blog.csdn.net/v7595v/article/details/45845347)
+
+day16 2023.01.19      java      7.9:   super关键字可以在子类的构造方法中显示地调用父类的构造方法，super()必须为子类构造函数中的第一行
+                                       向下转型的意义(https://blog.csdn.net/helpluozhao123/article/details/117765890)
+
+day17 2023.01.20      java      7.9:   (int)(Math.random()*x)生成[0-x)的随机整数   具体看11.2
+                                       可以通过 实例名.变量 来给实例的变量赋值
+
+day18 2023.01.30      java      8.1:   类包:可以解决类的同名问题,同一包中的类互相访问时，可以不指定包名
+                                       包的命名规则是全部使用小写字母  import关键字导入包(import com.mr.*是导入com.mr包中的所有类   import com.mr.Math是导入com.mr包中的Math类)
+                                       指定包中所有类(*)时，并不会指定包的子包的类
+                                       import static 静态成员:可以导入静态成员P136
+
+day19 2023.02.01      java      8.2:   成员内部类: 可以随意使用外部类的成员方法及成员变量
+                                                  在其他类中创建内部类对象:   1.外部类名 外部类实例名 = new 外部类名();
+                                                                            2.外部类名.内部类名 内部类实例名 = 外部类实例名.new 内部类名();
+                                                  当内、外部类中的变量重名时，可以使用this.x调用内部类中的x变量，TheSameName.this.x调用外部类中的x变量
+                                       匿名内部类: 只在创建对象时才会编写，现用现写:(父类 实例名=)new 父类/父接口(){ 子类实现的内容 };
+                                                  匿名内部类可以创建抽象类的实例,不能写构造方法,不能定义静态的乘员，如果没用赋值给任何变量则用完一次就会被销毁。
+
+day20 2023.02.07      java      8.3:   匿名内部类可以在最后的;前使用.方法名运行子类方法
+                                       可以在方法参数中填写其他类的类名并在方法中使用.方法来调用(调用的方法返回值类型需要为参数类型 如String型)
+                                       创建方法时可以创建字符串类型的方法(public String 方法名(){})以此来方便使该方法被其他地方调用
+                                       详见P140.ex3
+
+day21 2023.02.08      java      8.4:   Integer.parseInt("字符串")可以将字符串转换为int型
+                                9.2:   异常处理器:try-catch-finally 无论try语句块如何退出都将执行finally
+                                       try{程序代码块} catch(Exceptiontype1 e){对1的处理} catch....finally{程序代码块}
+                                       e.printStackTrace();可以将错误报告打印到控制台  可以将Exceptiontype1改为指定异常
+
+day22 2023.02.10      java      9.4:   继承Exception类即可自定义异常类
+                                9.5:   throws关键字可以抛出用户自定义的异常信息
+                                       将该关键字添加进方法参数()之后 例 int avg(int a, int b) throws Exception    if判断出异常时使用throw new Exception("自定义信息");
+                                       Exception可以改名，且可被catch(Exception e)进行捕获  ，但改名后需新建如MyException类  详见P149与P151习题
+                                       int a = (int) b可以进行强制类型转换
+
+day23 2023.02.12      java      10.1:  可以用String s = new String(char a[], 起始位置, 截取长度); 来将字符或是其他列表中的内容转换为一个字符串
+                                       也可以用new String(a)直接将列表内的全部内容转化为字符串
+                                10.2:  可以用+来连接字符串与其他内容 String a = b + c;
+                                10.3:  .length()可以获取字符串长度  .indexOf()与.lastIndexOf()可以获取首次/末次出现的位置  .charAt(下标数)可以将指定下标的字符返回
+                                10.4:  .substring(起始位置, 结束位置)  可以截取字符串的指定位置
+                                       .trim()  去掉字符串首尾的空格
+                                       .replace(原字符, 想改成的字符)  替换字符串中的某些字符
+                                       .startsWith(字符串)/.endsWith(字符串)  判断字符串是否以特定内容开始或结束
+                                       .equals(另一个字符串变量)  判断字符串是否相等，字符串比较不能使用==，因为==是比较地址 (.equalsIgnoreCase(另一个字符串变量)可以忽略大小写进行比较)
+                                       .compareTo(另一个)  按Unicode值进行比较，返回结果为正/负整数
+                                       .toUpperCase()/.toLowerCase()  将字符串中的字母转化为大写/小写
+                                       .split(分隔字符串的分隔符,分割的次数)  可以将字符串分隔
+
+day24 2023.02.13      java      10.5:  日期/时间格式化:                                                常规类型格式化:
+                                                  import java.util.Date;                                            和日期时间相同，但不用调用Date
+                                                  Date date = new Date();                                           可以将结果转换为布尔类型/字符串类型/字符类型/十六进制类型等
+                                                  String 变量名 = String.format("格式字符串", date);
+                                                                                                      格式字符串详见P167
+                                10.6:  正则表达式:可以用来判断字符串是否满足某一格式,常用于判断语句中
+                                                 元字符与限定修饰符见P170
+                                10.7:  字符串生成器:定义需要经常改变的的字符串时可以使用StringBuilder来代替String
+                                                   .append(内容)添加内容    .insert(位置, 内容)向指定位置添加内容    .delete(起始位置, 结束位置)删除指定位置内容
+
+day25 2023.02.14      java      10.8:  java不支持像python中的负索引，但是可以使用array[array.length-1]来代替array[-1]
+                                       .contains(信息)  判断信息是否在字符串中(为什么教学里没写习题里用了啊？)
+
+day26 2023.02.16      java      11.1:  各种数字类型的常用方法见P176 P178 例如互相转化 字符串转化为数字等
+                                       布尔类型的常用方法见P179
+                                       char类型的常用方法见P180  如判断字符是否为字母/数字等
+                                       char c[] = str.toCharArray();    将字符串转化为字符数组
+
+day27 2024.02.19      java      11.2:  数字格式化: java.text.DecimalFormat;(用于格式化十进制数字)
+                                                 特殊字符及其说明见P182
+                                                 引用后: DecimalFormat myFormat(变量名) = new DecimalFormat(格式，如####.##);    DecimalFormat myFormat = new DecimalFormat();
+                                                        String output(变量名) = myFormat.format(变量(数据));                    myFormat.applyPattern(格式);
+                                                        使用时调用output                                                        使用时调用myFormat.format(变量(数据))
+                                                 特殊方法如:myFormat.setGroupingSize(x);   myFormat.setGroupingUsed(false);    可以实现数字分组
+                                       数学方法: 可以通过 Math.数学方法名 来使用 如Math.sin(Math.Pi/2);
+                                       包括Pi,E,三角函数,指数函数,取整函数,取最大值、最小值、绝对值函数等。P185
+                                       随机数: java.util.Random; 常用方法见P189
+
+day28 2024.02.21      java      11.2:  java.math.BigInterger; 处理大整数运算   常用加减乘除等见P190
+                                       java.math.BigDecimal;  处理大小数运算   常用方法见P192
+                                       使用时需要创建实例如 BigInterger x = new BigDecimal("数/变量名")
+                                11.3:  System类:in out err
+                                                System.currentTimeMillis();   获取1970.1.1 0点至今的毫秒数，通常用来计算时间(结束毫秒数-开始毫秒数)
+                                       .concat()  可以在字符串后面添加新的字符串，但格式只能为字符串
+                                11.4:  Scanner类常用方法见P195
+
+day29 2024.02.23      java      11.5:  Date类:
+                                              创建Date对象时需要使用long型整数，若使用double型可能会损失精度
+                                              import java.util.Date;
+                                              Date date = new Date();         //创建现在的日期
+                                              long value = date.getTime();    //获得毫秒数
+                                       日期格式化:
+                                                 DateFormat df = DateFormat.getDateInstance(DateFormat.LONG);    创建对象(df),LONG可改为SHORT/MEDIUM/FULL
+                                                 System.out.println(df.format(new Date()))
+                                                 .getDateInstance()是获取所在国家或地区的标准日期格式
+                                                 时间、日历等其他格式化方法详见P198
+                                                SimpleDateFormat类可以让开发者随意编辑日期格式，格式化字符详见P199
+                                                个人较为喜欢yyyy.MM.dd
+                                                import java.text.DateFormat；
+                                                import java.text.SimpleDateFormat;
+                                                import java.util.Date;
+                                                ... ...{
+                                                        DateFormat df = new SimpleDateFormat("yyyy.MM.dd");
+                                                        System.out.println(df.format(new Date()));}
+
+day30 2024.02.25      java      11.5:  Calendar类(日历类):
+                                                         主要用于自定义时间, Date与Calendar的区别(https://blog.csdn.net/weixin_44589334/article/details/89975515)
+                                                         常用的字段及方法见P202    日期转换格式可见P203 train10
+                                       Runtime类:
+                                                 Runtime.getRuntime().exec("javac hello.java");   可以在运行环境中执行cmd/shell命令
+                                                 或 String command[] = {"javac", "hello.java"};
+                                                    Runtime.getRuntime().exec(command);
+                                                 其他用法见P204
+
+day31 2024.02.26      java      11.6:  Calendar c = Calendar.getInstance();
+                                       int year = c.get(Calendar.YEAR);   获取当前年, 其他同理
+                                       int month = c.get(Calendar.MONTH) + 1;   获取的月从零开始所以需要+1
+                                       c.add(Calendar.MONTH, 1);    当前月份+1, 为下一条代码做准备
+                                       c.set(Calendar.DAY_OF_MONTH, 0);   获取上个月的最后一天(上一条加了一月，所以是这个月的最后一天)
+                                       int dayCount = c.get(Calendar.DAY_OF_MONTH);   设置本月最多天数
+                                       c.set(Calendar.DAY_OF_MONTH, 1);   设置本月为第一天
+                                       int week = c.get(Calendar.DAY_OF_WEEK);    设置第一天为星期X
+
+                                12.2:  Collection接口:                                                                        遍历例子
+                                                      .add()将指定对象添加到该集合                                             import java.util.*;
+                                                      .remove()将指定对象从该集合中删除                                        ...    类-方法
+                                                      .isEmpty()返回布尔值, 判断是否为空                                       Collection<String> list = new ArrayList<>();
+                                                      .iterator()返回迭代器, 用于遍历对象                                      ...    向集合添加数据(list.add("");)
+                                                      .size()返回int值, 获取元素个数                                           lterator<String> it = list.iterator();
+                                                      List/Set继承Collection, 所以方法对这俩也通用                              while(it.hasNext()){
+                                                                                                                                  String str = (String) it.next();
+                                                                                                                                  System.out.println(str);}
+
+——————————————————————————————研究一下毕设的QT和C++——————————————————————————————
