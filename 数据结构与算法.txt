@@ -88,8 +88,8 @@
               框架def quick_sort(data, left, right):
                     if left < right:    # 至少两个元素
                         mid = partition(data, left, right)
-                        quick_sort(data, left, mid - 1)
-                        quick_sort(data, mid + 1, right)
+                        quick_sort(data, left, mid - 1)   # 排序第一个元素归位后的左边列表
+                        quick_sort(data, mid + 1, right)  # 排序第一个元素归位后的右边列表
 
                   def partition(li, left, right):
                       tmp = li[left]
@@ -148,3 +148,37 @@
                         for i in range(n-1, -1, -1):
                             li[0], li[i] = li[i], li[0]
                         sift(li, 0, i - 1)		# i-1是新的high    时间复杂度O(nlogn)
+
+              归并排序:
+                      归并:假设有两段有序列表，将其合成为一个有序列表即为归并(左右互相按顺序比大小，小/大的一方提出)
+                      def merge(li, low, mid, high):  # low:左箭头 mid:中间数 high:又箭头
+                          i = low
+                          j = mid + 1
+                          while i <= mid and j <= high: # 两边都有数
+                              if li[i] < li[j]:
+                                  list_tmp.append(li[i])
+                                  i += 1
+                              else:
+                                  list_tmp.append(li[j])
+                                  j += 1
+                          while i <= mid:
+                              list_tmp.append(li[i])
+                              i += 1
+                          while j <= high:
+                              list_tmp.append(li[j])
+                              j += 1
+                          li[low:high+1] = list_tmp
+
+                      def merge_sort(li, low, high):  # 左边排序，右边排序，左右合并，递归！
+                          if low < high:  # 至少有两个元素，递归
+                              mid = (low + high) // 2
+                              merge_sort(li, low, mid)
+                              merge_sort(li, mid+1, high)
+                              merge(li, low, mid, high)     时间复杂度:O(nlogn)  空间复杂度:O(n)
+
+              冒泡排序最好情况时间复杂度为O(n)
+              空间复杂度:快速平均O(logn)、最坏O(n)
+                        归并O(n)
+                        其余为O(1)
+              稳定性:冒泡、插入、归并稳定    稳定的排序可以保证相同内容在排序后相对位置不变(挨个换的是稳定的，跳着换的是不稳定的)
+                    选择、快速、堆不稳定

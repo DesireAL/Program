@@ -44,8 +44,7 @@ day6 2022.10.29    python			ex33:while循环
 									 						ex36:设计和调试 if语句的规则 循环的规则 家庭作业
 									 						ex37:各种符号与关键字
 									 						ex38:见str.
-									 						ex39:stuff = {'name':'Zed','age':'39'}字典  stuff['city'] = "Beijing"字典添加内容  del stuff['city']字典删除内容
-									 								 list(stuff.items())可将字典中的内容生成列表 stuff.get('name',value)可获得Zed 若没有name则获得value 默认为None
+									 						ex39:list(stuff.items())可将字典中的内容生成列表
 									 						ex40:import xxx模块、class类和object对象  class类(https://zhuanlan.zhihu.com/p/30024792)(https://blog.csdn.net/weixin_45410337/article/details/97423095)
 
 day7 2022.10.30 	 python			ex41:oop理解小测试 运行ex41.py即可(代码为用单词替换PHRASES字典中的@@@、***、%%%、等字符，无需看懂) 运行ex41.py时若加上第二个参数english,则问题和答案互换
@@ -63,7 +62,7 @@ day8-15 2022.10.31 python 		ex44:隐式继承 显式覆盖 super重写扩展   �
 																	 pyinstaller [主文件] -p [其他文件1] -p [其他文件2] -p [其他文件3] --hidden-import [自建模块1] --hidden-import [自建模块2] --hidden-import [自建模块3]
 																	 双层循环可以在break第一层循环时定义个变量，第二层循环用if停止
 															day4:思路:设置一个选关程序  isalnum()判断字符和数字  alpha()判断字符  ex4的各种判断太麻烦了！！
-															day5:新发现四个bug,用了个超长的if语句修好了^_^  except捕获异常  len(input()) == 0可以判断无输入
+															day5:新发现四个bug,用了个超长的if语句修好了^_^  except捕获异常  len(input()) == 0可以判断无输入	len(list/str/dict)求长度
 															day6:思路:将字体每行显示改为在每行的基础上每字显示√  flush=True可以让print在不换行的情况下马上显示内容
 																	 变量名.read().splitlines()可以去掉readlines中的换行符
 															day7:将剩余的字全部放入txt 封装成exe进行试玩
@@ -202,3 +201,23 @@ day35 2023.04.01	 python			exit("字符串")可以退出整个程序的同时打
 																				 li.reverse()	:反转列表
 																				 item in li	:判断item是否在列表中
 																				 enumerate(li)	:枚举，带下标值
+
+day36 2023.04.02	 python			dict(字典):
+																				 dict = {"key":"value", "key2":"value2"}	:value可以为列表/字典/字符串等(一个key对应多个value)
+																				 dict["key"] = "value"	:添加/修改字典
+																				 del dict["key"]	:删除
+																				 dict.pop["key"]	:弹出
+																				 dict["key"]	:取value
+																				 "key" in dict	:判断是否存在
+																				 dict.keys()	:返回字典中所有的key的列表
+																				 dict.values()	:返回字典中所有value的列表
+																				 dict.items()	:返回一个包含所有元组的列表
+																				 dict.get("key", 返回值)	:返回key对应的value值，若不存在key则返回返回值
+
+															当for循环的字典/列表等东西中含有两个元素，可以使用for i,j in dict.item
+															bit:表示单位	bytes:存储单位
+															sort方法是基于归并与插入进行优化后的排序
+															一般情况下排序运行时间:快速排序>归并排序>堆排序
+															缺点:快速排序:极端情况下效率低
+																	 归并排序:需要额外内存空间
+																	 堆排序:在三种排序中相对较慢
