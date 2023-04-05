@@ -15,14 +15,14 @@ day3 2022.10.26		 python			ex11:input()输入内容  int(input())获取数字
 									 						ex12:input("提示内容") pydoc文档生成工具
 									 						ex13:import语句调用模块(库) argv(argument variable)参数变量 unpack解包
 									 						ex14:argv与input结合使用  用户提示符设为变量可方便更改 prompt = ">"  input(prompt)
-									 						ex15:open()打开文件 read()读取文件 close()关闭文件 open( , encoding="utf-8")显示汉字
+									 						ex15:open( , encoding="utf-8")显示汉字
 
 day4 2022.10.27		 Powershell ni name创建文件
-									 python			ex16:open( ,w)覆写文件  w+同时读写  默认r(read)只读模式  及时使用close关闭文件防止循环导致溢出
+									 python			ex16:文件及时使用close关闭文件防止循环导致溢出
 									 						ex17:复制文件 open与read可以合并成indata = open().read()          print(">>>> file=", repr(file))  repr()返回一个对象的字符串格式(左右加引号)
 									 						ex18:def function(variable)创建函数       def 函数名(变量,变量):
 									 						ex19:函数里的变量与脚本里的变量没有联系，可以使用字符串、数字、变量、数字计算、变量+数字计算等方式将变量输送给函数  函数栈是临时的 不会储存数据
-									 						ex20:readline()只读取文本文件中的一行 下一次调用则读取下一行 seek(0)转到文件的0字节  readlines()读取全部文本并存储为列表
+									 						ex20:见操作文件
 									 						ex21:return x返回值到变量中 可以是数，字符串等
 									 						ex22:总结
 									 						ex23:字符串、字节串和字符编码 ASCII utf-8
@@ -145,7 +145,7 @@ day33 2023.03.30   python     四种算法:冒泡、选择、插入、快速
 day34 2023.03.31   python			id(变量名)可以看到物理地址(内存地址)
 															python解释器也自带垃圾回收器,可以回收无用的内存地址
 															name2 = name时是指向name的内存地址，不会生成新地址
-															ctrl D = 在输入上一行代码
+															ctrl D = 复制并在下一行输入本行代码
 															ctrl ? = 注释掉选中的所有行
 
 day35 2023.04.01	 python			exit("字符串")可以退出整个程序的同时打印一次字符串
@@ -221,3 +221,58 @@ day36 2023.04.02	 python			dict(字典):
 															缺点:快速排序:极端情况下效率低
 																	 归并排序:需要额外内存空间
 																	 堆排序:在三种排序中相对较慢
+
+day37 2023.04.03	 python			在解释器首行进行声明可以用特定编码解释文件: # -*- encoding:gbk -*-
+															任何编码转换成Unicode的过程都叫解码
+															解码: str.decode("字符串编码格式,如gbk")
+															编码: str.encode("编码格式")
+															操作文件:
+																			f = open("文件名", mode="r/w/a", encoding="utf-8")	:打开	r-只读 w-创建/覆盖 a-添加内容 w+写读 r+读写 a+追加读		rb/wb/ab为二进制模式(可以打开图片)
+																			f.write("内容")	:写操作
+																			f.read()	:读出所有内容
+																			f.close()	:保存并关闭
+																			f.readline()只读取文本文件中的一行
+																			f.readlines()读取全部文本并存储为列表
+																			二进制文件写入文本也需要使用二进制格式(f.write(str.encode="utf-8"))
+																			f.seek(字节)	:可以修改已打开的文件读取/写入字节位置
+																			f.tell()	:返回光标当前位置
+																			f.truncate()	:从光标处截断文件	配合seek(0)可以清空文件
+																			如何修改文件: 加载文件 在内存中修改(此时文件为str) 把新内容写到硬盘													 占内存
+																									 循环加载每行文件 保留不修改文件添加到新文件 修改文件后添加到新文件 删掉原文件			占硬盘
+															.flush()	:可以强制把内存中的数据写到硬盘上
+
+															sys模块:主要用于读取外部指令(终端中的)	python3 __.py 外部参数1 外部参数2
+																			import sys	(sys.argv[0]是__.py文件)
+																			变量名1 = sys.argv[1]		外部参数1会赋值给变量名1
+																			变量名2 = sys.argv[2]		外部参数2会赋值给变量名2
+																			可以通过该模块使程序调用外部参数
+
+day38 2023.04.05   python			函数:
+																	默认参数(需在最后): 在定义函数时直接赋值(def None(x,y,z=1))
+																	位置参数(需在最前): 在调用函数时不需要写函数的参数定义名
+																	关键参数(指定参数): 在调用函数时参数可以不按顺序但需要写函数定义时的参数名
+																	非固定参数: *args 可以在调用时无限传值
+																						函数内调用时args为元组, 需要args[i]
+																						 **kwargs	调用时可以写 str="xxxxx"
+																						函数内调用时kwargs为字典 kwargs.get("key")
+																	地址传递:以上为值传递
+																					将列表/字典等数据类型传递进函数时可以在函数中进行更改元素(append这种)
+																					(列表的内存地址传递给函数，修改元素时是修改元素的内存地址而不是列表的内存地址)
+														  内置函数:
+																			abs(): 取绝对值
+																			all(items): 布尔判断, item可以为列表等, 全部为True即all()为True
+																			bool(item): 判断itme的布尔值
+																			any(items): 布尔判断, 一个为True即any()为True
+																			chr(int):	打印ASCII值对应的字符
+																			ord("字符"): 打印字符的ASCII码
+																			dict(空/内容): 生成一个空/或带内容的字典
+																			dir(): 打印当前程序(作用域)下的所有变量名
+																			locals(): 所有变量名+变量值
+																			m = map(函数(不加括号,只能定义1个参数), 元素(列表)): 将元素(列表)依次交给函数进行运算
+																			map调用后不会立即执行(迭代器), 使用for i in m时才会开始执行
+																			max()/min(): 取最大/最小值
+																			sum(): 求和
+																			filter(函数, 列表): 将列表中元素依次传入函数, 返回的元素若为True, 则保留(过滤器)
+																			zip(a,b): 将a,b(列表)配对 使用循环时开始执行(迭代器)
+																			round(double, int): 将double保留int位小数
+																			help/id/input/int/len/list/open/enumerate/str/type..
