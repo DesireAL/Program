@@ -153,9 +153,14 @@ day35 2023.04.01	 python			exit("字符串")可以退出整个程序的同时打
 															"".join()可以用于将列表中的元素进行拼接
 															random模块:
 																				import random
-																				random.choice('字符串/列表'):随机从字符串/列表中抽取一个字符/元素
-																				random.sample(列表,个数):随机从列表中抽取设置的个数个元素
-																				random.randint(1,100):打印一个随机数
+																				random.choice('字符串/列表'): 返回一个随机字符/元素
+																				random.sample(列表,数量): 随机从列表中抽取设置的数量个元素
+																				random.randint(1,100): 返回一个1-100的随机数, 包括100
+																				random.randrange(1,10): 返回一个1-100的随机数, 不包括10
+																				random.randrange(0,100,2): 返回一个0-100的偶数
+																				random.random(): 返回一个随机浮点数
+																				random.shuffle(变量名): 打乱列表中的顺序, 可以配合list(range(100))使用生成100个乱序数
+															''.join(random.sample(string.ascii_lowercase + string.digits, 6)): 随机生成6位数字符串
 															string模块:
 																				import string
 																				string.ascii_letters:输出所有小写和大写字母
@@ -276,3 +281,103 @@ day38 2023.04.05   python			函数:
 																			zip(a,b): 将a,b(列表)配对 使用循环时开始执行(迭代器)
 																			round(double, int): 将double保留int位小数
 																			help/id/input/int/len/list/open/enumerate/str/type..
+
+day39 2023.04.06	 python			导入模块:
+																			import module
+																			from module import xx
+																			from module import xx as rename
+														  自定义模块路径:
+																					  import sys
+																						import os				# __file__当前文件路径  os.path.dirname(__file__)当前文件路径的上一级路径
+																						base_path = os.path.dirname(os.path.dirname(__file__))
+																						sys.path.append(base_path)			# 往默认路径中添加当前文件的文件夹
+															第三方开源模块:
+																						网站地址: https://pypi.org/	镜像网址 清华/豆瓣
+																						命令行: pip install xxxxx (-i http...)
+															包(文件夹):在目录下创建 __init__.py 即可成为包, 包可跨层级导入
+																				from 包.子包.模块名 import 函数名
+																				调用包时会直接执行 __init__.py 文件
+															os模块:
+																		 os.getcwd(): 获得当前Python脚本工作的目录路径
+																		 os.listdir(): 返回指定目录下的所有文件和目录名
+																		 os.remove(): 用来删除一个文件
+																		 os.removedirs(r"c:\python"): 删除整个目录
+																		 os.path.isfile(): 检验给出的路径是否是一个文件
+																		 os.path.isdir(): 检验给出的路径是否是一个目录
+																		 os.path.exists(): 检验给出的路径是否真实存在
+																		 os.path.dirname(): 获取路径名(不包含文件名)
+																		 os.path.abspath(文件名): 获取文件绝对路径
+																		 os.path.basename(): 获取文件名
+																		 os.system(): 运行shell命令
+																		 os.rename(old, new): 重命名
+																		 os.makedirs(r"c:\python\test"): 创建多级目录, 不指定盘的话即为当前目录下创建
+																		 os.mkdir("test"): 创建单个目录
+																		 os.stat(file): 获取文件属性
+																		 os.path.getsize(filename): 获取文件大小
+															sys模块:
+																			sys.path: 获取环境变量
+																			sys.argv[]: 获取脚本参数
+															时间戳: 从1970.1.1 00.00.00开始按秒计算偏移量
+															格式化的时间字符串: "2020-10-03 17:54"
+															时间元组: 月、日、一年中的第几天计算从1开始, 周、时、分、秒计算从0开始
+															time模块:
+																			 time.time(): 时间戳
+																			 time.sleep(): 延迟时间, 按秒算
+																			 time.localtime([secs]): 按时间戳转换为当前地区的时间元组，不提供secs则为当前时间
+																			 time.gmtime([secs]): 将时间戳转换为0时区的时间元组
+																			 time.mktime(t): 将一个元组对象转换为时间戳
+																			 time.strftime("%Y-%m-%d %X", time.localtime()): 将时间元组转换为特定格式, 上式为转换当前时间
+																			 time.strptime(str, "%Y-%m-%d %X"): 根据字符串与其格式转成时间元组
+														  datetime模块:
+															 						 datetime.datetime.now(): 返回当前时间, 使用print可以直接打印格式化时间
+																					 datetime.datetime.fromtimestamp(): 时间戳转换成时间
+																					 datetime.timedelta(参数): 可以增加/修改时间
+																					 d = datetime.datetime.now()
+																					 d.replace(year=xxxx, month=x, ...): 可以直接替换(修改)时间
+														  openpyxl(Excel)模块:
+																								 from openpyxl import Workbook
+																								 wb = Workbook()		# 创建Excel
+																								 wb.save("命名.xlsx")			# 保存Excel文件
+																								 wb2 = load_workbook("xxxx.xlsx")		# 直接打开xlsx文件
+																								 wb2.sheetnames()			# 获取表格全部sheet名
+																								 sheet = wb.active		# 获取活跃的Sheet
+																								 sheet.title = "命名"		# 更改Sheet名
+																								 wb.remove(sheet):			# 删除工作表
+																								 wb.create(sheet2):			# 创建工作表
+																								 sheet["C7"] = "xxxxx"		# 在xlsx指定位置填入数据
+																								 sheet.append([内容1, 内容2, 内容3]): 在最新一行加入三个数据(占3个)
+																								 sheet = wb2.get_sheet_by_name("sheet名")			# 获取列表sheet
+																								 sheet["B5"].value			# 获取该sheet指定位置内容
+																								 for cell in sheet["B5:B10"]:			# 循环切片获取数据
+																								 		 print(cell[0].value)			# cell.value为元组
+																								 for row in sheet:			# 遍历打印
+																								 		 for cell in row:
+																										 		 print(cell.value, end=",")
+																								 for row in sheet.iter_rows(min_row=4, max_row=21, min_col=0, max_col=5):			# 切片4-21行, 切5列	按行循环
+																								 		 for cell in row:
+																										 		 print(cell.value, end=",")
+																								 for column in sheet.columns:			# 按列循环
+																								 for colimn in sheet.iter_cols(min_col=3, max_col=4, min_row=x, max_row=y):		# 切片3-4列， 切y-x行	 按列循环
+
+																								 from openpyxl.styles import Font, colors, Alignment
+																								 bold_itatic_24_font = Font(name='字体名', size=24, italic(斜体)=True, color=colors.RED, bold(粗体)=True)			# 声明字体熟悉
+																								 sheet['A1'].font = bold_itatic_24_font			# 设置单元格字体样式
+																								 sheet['B1'].alignment = Alignment(horizontal(水平方向)='center', vertical(垂直方向)='center')			# 设置字体垂直水平方向
+																								 sheet.row_dimensions[3].height = 40			# 设置行高
+																								 sheet.column_dimensions['C'].width = 30	# 设置列宽
+														  email与smtplib模块:
+																								import smtplib
+																								from email.mime.text import MIMEText			# 构造邮件正文
+																								from email.header import Header			# 邮件头(收件人等)
+																								# 登录服务器
+																								smtp_obj = smtplib.SMTP_SSL("服务器地址", 端口号)			# 发件人邮箱中的SMTP服务器和端口号
+																								smtp_obj_login("用户名", "密码")			# 发件人账号密码/客户端专用密码
+																								smtp_obj.set_debuglevel(1)			# 显示调试信息
+																								# 设置邮件头信息
+																								msg = MIMEText("内容", "类型", "编码格式")
+																								msg["From"] = Header("发件人(姓名)", "utf-8")			# 发送者
+																								msg["To"] = Header("收件人(姓名)", "utf-8")			# 接收者
+																								msg["Subject"] = Header("主题名", "utf-8")			# 标题
+																								# 发送
+																								smtp_obj.sendmail("发件人邮箱", “收件人邮箱(可以是列表)”, msg.as_string())
+																								服务器地址:账户里开启SMTP服务
