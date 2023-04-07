@@ -210,6 +210,10 @@ day35 2023.04.01	 python			exit("字符串")可以退出整个程序的同时打
 day36 2023.04.02	 python			dict(字典):
 																				 dict = {"key":"value", "key2":"value2"}	:value可以为列表/字典/字符串等(一个key对应多个value)
 																				 dict["key"] = "value"	:添加/修改字典
+																				 dict.setdefaule("key", "value"): 添加新内容, 若key存在则无效
+																				 dict.update({"key1":value1, "key2":value2}): 没有的key添加, 有的key更新
+																				 dict.pop("key"): 弹出指定key, 将value返回
+																				 dict.popitem(): 弹出最后元素, 返回(key, value)
 																				 del dict["key"]	:删除
 																				 dict.pop["key"]	:弹出
 																				 dict["key"]	:取value
@@ -279,7 +283,7 @@ day38 2023.04.05   python			函数:
 																			sum(): 求和
 																			filter(函数, 列表): 将列表中元素依次传入函数, 返回的元素若为True, 则保留(过滤器)
 																			zip(a,b): 将a,b(列表)配对 使用循环时开始执行(迭代器)
-																			round(double, int): 将double保留int位小数
+																			round(double, int): 将double保留int位小数(四舍五入)
 																			help/id/input/int/len/list/open/enumerate/str/type..
 
 day39 2023.04.06	 python			导入模块:
@@ -381,3 +385,21 @@ day39 2023.04.06	 python			导入模块:
 																								# 发送
 																								smtp_obj.sendmail("发件人邮箱", “收件人邮箱(可以是列表)”, msg.as_string())
 																								服务器地址:账户里开启SMTP服务
+															tuple(元组):
+																					有序且<不可变>的容器(11,22,33,[44,55])
+																					其中11,22,33不可变,但list内部元素可以进行修改
+																					元组可以相加、相乘、获取长度、索引、切片、步长、for循环
+																					tuple(字符串/列表): 拆分后转换成元组
+															set(集合):
+																				无序、可变、不允许数据重复的容器(爬虫爬数据防止重复可以用集合)
+																				v1 = set(11, 22, 33, "desire")
+																				set.add("元素")： 添加元素
+																				set.discard("元素"): 删除元素
+																				s3 = s1 & s2或者s3 = s1.intersection(s2): 取交集
+																				s3 = s1 | s2或者s3 = s1.union(s2): 取并集
+																				s3 = s1 - s2或者s3 = s1.difference(s2): 取差集, s1有且s2没有的值
+																				可以使用len、for   集合是无序的，无法通过索引取值
+																				set(str/list/tuple): 转换成集合(可以用来去重)
+																				集合的元素必须是可哈希的(int/bool/str/tuple)(转换时若内容包含列表则会报错)
+																				<集合中的元素查找速度快>  True与False本质上是1与0,所以在集合中不能同时存在T/1或F/0
+																				集合中可以包含元组，但是元组中不能含有列表
