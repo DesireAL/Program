@@ -267,6 +267,9 @@ day38 2023.04.05   python			函数:
 																	地址传递:以上为值传递
 																					将列表/字典等数据类型传递进函数时可以在函数中进行更改元素(append这种)
 																					(列表的内存地址传递给函数，修改元素时是修改元素的内存地址而不是列表的内存地址)
+																					函数执行传参时, 传递的是内存地址
+																					函数的返回值也是内存地址
+																					由于python的内部优化(缓存与驻留机制), 字符串与数字再次创建时不会使用新的内存地址
 														  内置函数:
 																			abs(): 取绝对值
 																			all(items): 布尔判断, item可以为列表等, 全部为True即all()为True
@@ -292,8 +295,8 @@ day39 2023.04.06	 python			导入模块:
 																			from module import xx as rename
 														  自定义模块路径:
 																					  import sys
-																						import os				# __file__当前文件路径  os.path.dirname(__file__)当前文件路径的上一级路径
-																						base_path = os.path.dirname(os.path.dirname(__file__))
+																						import os				# __file__当前文件路径  os.path.absname(__file__)当前文件的绝对路径
+																						base_path = os.path.dirname(os.path.absname(__file__))
 																						sys.path.append(base_path)			# 往默认路径中添加当前文件的文件夹
 															第三方开源模块:
 																						网站地址: https://pypi.org/	镜像网址 清华/豆瓣
@@ -309,7 +312,7 @@ day39 2023.04.06	 python			导入模块:
 																		 os.path.isfile(): 检验给出的路径是否是一个文件
 																		 os.path.isdir(): 检验给出的路径是否是一个目录
 																		 os.path.exists(): 检验给出的路径是否真实存在
-																		 os.path.dirname(): 获取路径名(不包含文件名)
+																		 os.path.dirname(): 获取上一级目录
 																		 os.path.abspath(文件名): 获取文件绝对路径
 																		 os.path.basename(): 获取文件名
 																		 os.system(): 运行shell命令
@@ -318,6 +321,7 @@ day39 2023.04.06	 python			导入模块:
 																		 os.mkdir("test"): 创建单个目录
 																		 os.stat(file): 获取文件属性
 																		 os.path.getsize(filename): 获取文件大小
+																		 os.path.join(base_path, 'files', 'info.txt'): 路径拼接
 															sys模块:
 																			sys.path: 获取环境变量
 																			sys.argv[]: 获取脚本参数
@@ -385,7 +389,8 @@ day39 2023.04.06	 python			导入模块:
 																								# 发送
 																								smtp_obj.sendmail("发件人邮箱", “收件人邮箱(可以是列表)”, msg.as_string())
 																								服务器地址:账户里开启SMTP服务
-															tuple(元组):
+
+day40 2023.04.07   python     tuple(元组):
 																					有序且<不可变>的容器(11,22,33,[44,55])
 																					其中11,22,33不可变,但list内部元素可以进行修改
 																					元组可以相加、相乘、获取长度、索引、切片、步长、for循环
@@ -403,3 +408,20 @@ day39 2023.04.06	 python			导入模块:
 																				集合的元素必须是可哈希的(int/bool/str/tuple)(转换时若内容包含列表则会报错)
 																				<集合中的元素查找速度快>  True与False本质上是1与0,所以在集合中不能同时存在T/1或F/0
 																				集合中可以包含元组，但是元组中不能含有列表
+
+day41 2023.04.08   python			==: 比较两个值是否相等
+															is: 比较两个内存地址是否一致
+															位运算(二进制运算):
+																								&: 与(都为1)
+																								|: 或(只要有一个为1)
+																								^: 异或(值不同)
+																								-: 取反
+																								<< 2: 左移动2位
+																								>> 2: 右移动2位
+															如2**n = 1 << n
+															  计算数的一半 = x >> 1
+															shutil模块:
+																				压缩文件: shutil.make_archive(base_name=r'D:\xxx\xxx\x1', format='zip', root_dir=r'D:\xxxxxx\xx')
+																				压缩后放置路径/压缩格式/压缩文件路径
+																				解压文件: shutil.unpack_archive(filename=r'D:\sxxx\sxxx\x1.zip', extract_dir=r'D:sxxx\sxxx\xxx', format='zip')
+																				压缩包路径/解压路径/压缩包格式
