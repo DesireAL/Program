@@ -425,3 +425,45 @@ day41 2023.04.08   python			==: 比较两个值是否相等
 																				压缩后放置路径/压缩格式/压缩文件路径
 																				解压文件: shutil.unpack_archive(filename=r'D:\sxxx\sxxx\x1.zip', extract_dir=r'D:sxxx\sxxx\xxx', format='zip')
 																				压缩包路径/解压路径/压缩包格式
+
+day42 2023.04.09   python     v1 = "as" and "zxc": 				v1 = "zxc"
+															v2 = "" and "zxc": 					v1 = ""
+															v3 = 1 or 8: 								v3 = 1
+															v4 = 0 or 8: 								v3 = 8
+															func(函数):
+																					当函数声明中含有可变类型的默认值(list/dict/set),函数在调用一次后再次调用时不会重新创建默认值
+																					如def list(a, b=[1,2]):
+																								b.append(3)
+																					调用第二次list函数时, b=[1, 2, 3, 3]
+																					若中间调用函数时赋值了, 但[1, 2, 3, 3]的内存地址并没有被清除, 再次使用默认参数时会变成[1, 2, 3, 3, 3]
+																					python为解释型语言, 函数的调用需要在函数的定义之后
+																					函数名可以当做列表, 字典, 集合的元素, 当x = list[5]中为函数名时(不能加括号), x为函数的返回值
+																					对函数名重新赋值, 函数名将不再指代函数
+														  global var: 在函数中声明全局变量, 可以对已有的全局变量进行重新赋值, 不适用global即为创建新的同名变量
+
+day43 2023.04.10   python     函数调用元素优先在自己的作用域内进行查找
+															闭包:
+																	 可以将数据与多个函数嵌套进一个函数中, 封装数据防止污染全局(当全局变量有其他函数用不到时可以使用, 使用的较少)
+																	 在函数嵌套之后, 可以在内部函数使用外部函数的参数, 使得调用函数时可以使用不同的参数
+															并行多线程:
+																				from concurrent.futures.thread import ThreadPoolExecutor
+																				POOL = ThreadPoolExecutor(10)			# 线程池
+																				future = POOL.submit(函数名)			# 指定一个线程执行函数, 使用for函数时不会执行完1个再执行下1个, 而是同时执行
+																				future.add_done_callback(函数名)			# 每当执行完一次线程时会内部执行函数
+																				可以通过闭包配合多线程(如下载3个视频...callback(outer(item[0]())))...outer为闭包函数, item[0]为视频名称
+																				outer中含有done(arg)函数, 并且return done, 于是视频名会传进done, 于是会执行三次done函数, 保存为三个文件(done函数中内容)
+															装饰器:
+																		基于@语法和函数闭包, 将原函数封装在闭包中, 然后将函数赋值为一个新的函数(内层函数), 执行函数时再在内层函数中执行闭包中的原函数
+																		在某个函数1上方使用 @函数名2 , python内部会自动执行 函数名2(函数1) ,再将结果赋值给函数1
+																		@outer									# func = outer(func)
+																		def func():							#	func()  (此时func = inner, 整体执行下来相当于执行了func()与inner内部的代码)
+																				pass
+
+																		def outer(origin):			# origin=func
+																				def inner(*args, **kwargs):
+																						执行代码前的内容
+																						res = origin(*args, **kwargs)			# 调用原来的func函数, res = func()
+																						执行代码后的内容
+																						return res			# 返回func()的返回值
+																				return inner
+																		(outer需要再func之上, 因为python为解释型语言)

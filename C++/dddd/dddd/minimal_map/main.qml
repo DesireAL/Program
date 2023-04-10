@@ -10,8 +10,8 @@ Window {
 
     Plugin {
         id: mapPlugin
-        name: "osm" // "mapboxgl", "esri", ...
-//        name:"mapboxgl"
+//        name: "osm" // "mapboxgl", "esri", ...
+        name:"mapboxgl"
     }
 
     Map {
