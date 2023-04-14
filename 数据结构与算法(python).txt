@@ -252,3 +252,45 @@
                             线性结构: 元素存在一对一的相互关系
                             树结构: 元素存在一对多的相互关系
                             图结构: 元素存在多对多的相互关系
+
+              栈:
+                一个数据集合, 可以理解为只能在一端进行插入或删除操作的列表
+                特点: 后进先出
+                概念: 栈顶、栈底
+                基本操作: 进栈(push)  出栈(pop)  取栈顶(gettop)
+                使用一般的列表结构即可实现栈
+                li.append li.pop li[-1]
+              栈的应用:
+                      括号匹配问题:
+                                  class Stack():
+                                      def __init__(self):
+                                          self.stack = []
+                                      def pop(self):
+                                          stack.pop()
+                                      def push(self, element):
+                                          stack.attend(element)
+                                      def get_top(self):
+                                          if len(self.stack) > 0:
+                                              return self.stack[-1]
+                                          else:
+                                              return None
+                                      def is_empty(self):
+                                          return len(self.stack) == 0     # 栈为空为True, 否则为False
+
+                                  def match(s):
+                                      match = {'}':'{', ']':'[', ')':'('}
+                                      stack = Stack()
+                                      for ch in s:
+                                          if ch in {'(','[','{'}:
+                                              stack.push(ch)
+                                          else:
+                                              if stack.is_empty():
+                                                  return False
+                                              elif stack.get_top() == match[ch]:
+                                                  stack.pop()
+                                              else:
+                                                  return False
+                                      if stack.is_empty():
+                                          return True
+                                      else:
+                                          return False

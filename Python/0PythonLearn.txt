@@ -155,8 +155,9 @@ day35 2023.04.01	 python			exit("字符串")可以退出整个程序的同时打
 																				import random
 																				random.choice('字符串/列表'): 返回一个随机字符/元素
 																				random.sample(列表,数量): 随机从列表中抽取设置的数量个元素
-																				random.randint(1,100): 返回一个1-100的随机数, 包括100
-																				random.randrange(1,10): 返回一个1-100的随机数, 不包括10
+																				random.randint(1,100): 返回一个1-100的随机整数, 包括100
+																				random.uniform(1,10)： 返回一个范围内的随机小数
+																				random.randrange(1,10): 返回一个1-10的随机数, 不包括10
 																				random.randrange(0,100,2): 返回一个0-100的偶数
 																				random.random(): 返回一个随机浮点数
 																				random.shuffle(变量名): 打乱列表中的顺序, 可以配合list(range(100))使用生成100个乱序数
@@ -301,17 +302,36 @@ day39 2023.04.06	 python			导入模块:
 														  自定义模块路径:
 																					  import sys
 																						import os				# __file__当前文件路径  os.path.absname(__file__)当前文件的绝对路径
-																						base_path = os.path.dirname(os.path.absname(__file__))
-																						sys.path.append(base_path)			# 往默认路径中添加当前文件的文件夹
+																						base_path = os.path.dirname(os.path.dirname(__file__))			# 当前文件的上一层文件路径
+																						sys.path.append(r"D:\xx\xx")			# 往默认路径中添加输入的路径
+																						pycharm中默认会将项目目录加入到sys.path中
+																						import可以直接导入一个包含__init__.py的包, 然后直接加载此__init__文件
+																						import: 常用于项目根目0录下包/模块级别的导入
+																						from: 常用于成员、嵌套的包/模块时
 															第三方开源模块:
-																						网站地址: https://pypi.org/	镜像网址 清华/豆瓣
+																						网站地址: https://pypi.org/	镜像网址 清华/阿里/豆瓣(https://pypi.douban.com/simple/)
+																						修改pip源: pip config set global.index-url https://pypi.douban.com/simple/
 																						命令行: pip install xxxxx (-i http...)
 															包(文件夹):在目录下创建 __init__.py 即可成为包, 包可跨层级导入
 																				from 包.子包.模块名 import 函数名
 																				调用包时会直接执行 __init__.py 文件
+																				__init__文件中一般可以写该包的注释""" 注释 """
+																				相对导入: from . import xxxxx(当前路径)
+																							  : from .. import xxxxx(上一级路径)
+																				相对导入只能在模块里使用(包里)
+																				执行一个py文件时: __name__ = "__main__"
+																				导入一个py文件时: __name__ = "模块名"
+																				一般主文件下会有: if __name__ == "__main__":
 															os模块:
 																		 os.getcwd(): 获得当前Python脚本工作的目录路径
-																		 os.listdir(): 返回指定目录下的所有文件和目录名
+																		 os.listdir(): 返回指定路径下的文件和目录名
+																		 os.walk(): 遍历指定路径下的所有文件夹与所有文件
+																		 可以使用for path, folder_list, file_list in date: 来输出
+																		 						for file_name in file_list:
+																										file_abs_path = os.path.join(path, file_name)
+																										ext = file_abs_path.rsplit(".",1)[-1]
+																										if ext == "mp4"
+																												print(file_abs_path)
 																		 os.remove(): 用来删除一个文件
 																		 os.removedirs(r"c:\python"): 删除整个目录
 																		 os.path.isfile(): 检验给出的路径是否是一个文件
@@ -431,6 +451,7 @@ day41 2023.04.08   python			==: 比较两个值是否相等
 																				解压文件: shutil.unpack_archive(filename=r'D:\sxxx\sxxx\x1.zip', extract_dir=r'D:sxxx\sxxx\xxx', format='zip')
 																				压缩包路径/解压路径/压缩包格式
 
+
 day42 2023.04.09   python     v1 = "as" and "zxc": 				v1 = "zxc"
 															v2 = "" and "zxc": 					v1 = ""
 															v3 = 1 or 8: 								v3 = 1
@@ -509,3 +530,9 @@ day44 2023.04.11   python     匿名函数:
 																		推导式支持嵌套:
 																									data = [ [i,j] for j in range(5) for i in range(10)]
 																									data = [[0,1],[0,2]....]
+
+day45 2023.04.13   python     hashlib模块:md5加密
+																					def md5(origin, salt="qweozuxconaskdiashk"):
+																							hash_object = hashlib.md5(salt.encode('utf-8'))			# 加盐
+																							hash_object.update(origin.encode('utf-8'))				# 内容加密
+																							result = hash_object.hexdigest()
