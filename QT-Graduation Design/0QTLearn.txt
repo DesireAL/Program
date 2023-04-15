@@ -1,0 +1,58 @@
+23.04.15  qt  窗口  #include <QWidget>
+              程序  #include <QApplication>
+              标签  #include <QLabel>
+              文本行编辑框: #include <QLineEdit>
+              按钮  #include <QPushButton>
+              水平布局  #include <QHBoxLayout>
+              垂直布局  #include <QVBoxLayout>
+              进程  #include <QProcess>
+
+              创建指针:
+                      QLabel *infoLabel = new QLabel;       //info为提示信息 label为控件名
+                      QLabel *xLabel = new QLabel;      //纬度提示语
+                      QLabel *yLabel = new QLabel;      //经度提示语
+                      QLineEdit *xLineEdit = new QLineEdit;     //纬度(横)
+                      QLineEdit *yLineEdit = new QLineEdit;     //经度(竖)
+                      QPushButton *commitButton = new QPushButton;      //确定按钮
+                      QPushButton *cancelButton = new QPushButton;      //取消按钮
+
+              设置内容:
+                      infoLabel->setText("请在下方输入想要设置的经纬度");
+                      xLabel->setText("经度");
+                      yLabel->setText("纬度");
+                      commitButton->setText("确定");
+                      cancelButton->setText("取消");
+
+              水平布局:
+                      QHBoxLayout *xLayout = new QHBoxLayout;     //纬度水平布局对象
+                      xLayout->addWidget(xLabel);
+                      xLayout->addWidget(xLineEdit);      //添加控件
+
+                      QHBoxLayout *yLayout = new QHBoxLayout;     //经度水平布局对象
+                      yLayout->addWidget(yLabel);
+                      yLayout->addWidget(yLineEdit);
+
+                      QHBoxLayout *buttonLayout = new QHBoxLayout;      //按钮布局
+                      buttonLayout->addWidget(commitButton);
+                      buttonLayout->addWidget(cancelButton);
+
+              垂直布局:
+                      QVBoxLayout *lnglatLayout = new QVBoxLayout;
+                      lnglatLayout->addWidget(infoLabel);
+                      lnglatLayout->addLayout(xLayout);     //布局中加布局(小布局进大布局)
+                      lnglatLayout->addLayout(yLayout);
+                      lnglatLayout->addLayout(buttonLayout);
+
+              设置布局:
+                      QWidget w;
+                      w.setLayout(lnglatLayout);
+                      w.show();
+                      w.setWindowTitle("标题");     //设置窗口标题
+
+              使用Qt Creator:     //不使用设计界面
+                            槽函数需要再头文件中加上
+                            private slots:
+                                void 函数名();
+                            连接信号与槽connect(谁发出信号, 发出什么信号, 谁处理信号, 怎么处理)
+                            .cpp文件下ui->setupUi(this);     //创建设计的界面
+                            resize(xxx, yyy);     //修改窗口大小

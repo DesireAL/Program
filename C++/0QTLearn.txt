@@ -1,9 +1,0 @@
-cpp:
-    槽函数: connect(信号发起者(buttom), 事件, 信号接收者, 槽函数)
-    指针为矢量, 有指向性
-    创建指针 库名 + 指针名   指针前带* (*input_r)
-    .h头文件中创建指针后在.cpp文件中创建实例 ?
-
-qml:
-    root.onQmlSignalA.connect(cpp_obj.cppSlotA)
-    类似于槽函数: connect(root, QmlSignalA, cpp_obj, cppSlotA)
