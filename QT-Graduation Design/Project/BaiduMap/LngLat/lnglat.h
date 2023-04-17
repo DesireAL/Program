@@ -1,4 +1,4 @@
-#ifndef LNGLAT_H
+﻿#ifndef LNGLAT_H
 #define LNGLAT_H
 
 #include <QWidget>
@@ -7,7 +7,8 @@
 #include <QPushButton>
 #include <QHBoxLayout>
 #include <QVBoxLayout>
-//#include <QProcess>
+
+#include <lnglat_menu.h>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class LngLat; }
@@ -21,24 +22,18 @@ public:
     LngLat(QWidget *parent = nullptr);
     ~LngLat();
 
-    //标签
-    QLabel *infoLabel;       //info为提示信息 label为控件名
-    QLabel *xLabel;      //纬度提示语
-    QLabel *yLabel;      //经度提示语
-    //输入框
-    QLineEdit *xLineEdit;     //纬度(横)
-    QLineEdit *yLineEdit;     //经度(竖)
     //按钮
-    QPushButton *commitButton;      //确定按钮
-    QPushButton *cancelButton;      //取消按钮
+    QPushButton *lnglatButton;      //经纬度按钮
+    QPushButton *queryButton;
+    QPushButton *pathButton;
     //布局
-    QHBoxLayout *xLayout;     //纬度水平布局对象
-    QHBoxLayout *yLayout;     //经度水平布局对象
-    QHBoxLayout *buttonLayout;      //按钮布局
-    QVBoxLayout *lnglatLayout;      //整体布局
+//    QHBoxLayout *lnglatLayout;      //经纬度按钮水平布局
+//    QVBoxLayout *menuLayout;        //主界面布局
 
 private slots:
-    void cancelButton_clicked();
+    void lnglat_open();
+    void time_query();
+    void path_display();
 
 private:
     Ui::LngLat *ui;

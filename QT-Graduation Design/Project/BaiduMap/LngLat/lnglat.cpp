@@ -1,56 +1,53 @@
-#include "lnglat.h"
+﻿#include "lnglat.h"
 #include "ui_lnglat.h"
+#include <QtWidgets>
 
 LngLat::LngLat(QWidget *parent)
     : QWidget(parent)
     , ui(new Ui::LngLat)
 {
     ui->setupUi(this);
-    resize(300,200);
+    resize(1200,800);
 
-    //连接信号与槽
-//    connect(cancelButton, &QPushButton::clicked, this, &LngLat::cancelButton_clicked);
+    //按钮
+    lnglatButton = new QPushButton(QStringLiteral("经纬度修改"),this);
+    queryButton = new QPushButton(QStringLiteral("时间查询"),this);
+    pathButton = new QPushButton(QStringLiteral("路径显示"),this);
+    //按钮布局
+//    lnglatLayout = new QHBoxLayout(this);
+//    menuLayout = new QVBoxLayout(this);
+//    lnglatLayout->addWidget(lnglatButton);
+//    menuLayout->addLayout(lnglatLayout);
+    //按钮大小与位置
+//    lnglatButton->setFixedSize(100,50);
+    lnglatButton->resize(100,50);
+    lnglatButton->move(1050,200);
+    queryButton->resize(100,50);
+    queryButton->move(1050,325);
+    pathButton->resize(100,50);
+    pathButton->move(1050,450);
 
-    //输入框实例
-    xLineEdit = new QLineEdit();
-    yLineEdit = new QLineEdit();
-    //标签与按钮实例
-    infoLabel = new QLabel();
-    xLabel = new QLabel();
-    yLabel = new QLabel();
-    commitButton = new QPushButton();
-    cancelButton = new QPushButton();
-    //标签与按钮内容
-    infoLabel->setText("请在下方输入想要设置的经纬度");
-    xLabel->setText("经度");
-    yLabel->setText("纬度");
-    commitButton->setText("确定");
-    cancelButton->setText("取消");
-    //布局实例
-    xLayout = new QHBoxLayout();
-    yLayout = new QHBoxLayout();
-    buttonLayout = new QHBoxLayout();
-    lnglatLayout = new QVBoxLayout(this);
-    //界面布局
-    xLayout->addWidget(xLabel);
-    xLayout->addWidget(xLineEdit);
-    yLayout->addWidget(yLabel);
-    yLayout->addWidget(yLineEdit);
-    buttonLayout->addWidget(commitButton);
-    buttonLayout->addWidget(cancelButton);
-
-    lnglatLayout->addWidget(infoLabel);
-    lnglatLayout->addLayout(xLayout);
-    lnglatLayout->addLayout(yLayout);
-    lnglatLayout->addLayout(buttonLayout);
+    connect(lnglatButton, &QPushButton::clicked, this, &LngLat::lnglat_open);
 
 }
 
-void LngLat::cancelButton_clicked()
+void LngLat::lnglat_open()
 {
-//    this->close();
+
+    lnglat_menu *lnglat_m = new lnglat_menu();
+    lnglat_m->show();
+
 }
 
+void LngLat::time_query()
+{
+
+}
+
+void LngLat::path_display()
+{
+
+}
 LngLat::~LngLat()
 {
     delete ui;
