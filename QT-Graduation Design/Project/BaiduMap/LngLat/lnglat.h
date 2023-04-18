@@ -27,8 +27,8 @@ public:
     QPushButton *queryButton;
     QPushButton *pathButton;
     //布局
-//    QHBoxLayout *lnglatLayout;      //经纬度按钮水平布局
-//    QVBoxLayout *menuLayout;        //主界面布局
+    QHBoxLayout *lnglatLayout;      //经纬度按钮水平布局
+    QVBoxLayout *menuLayout;        //主界面布局
 
 private slots:
     void lnglat_open();

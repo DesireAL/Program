@@ -6,14 +6,16 @@
 
 int main(int argc, char *argv[])
 {
-//    QApplication a(argc, argv);
+
+//    QApplication app(argc, argv);
 //    LngLat w;
+//    w.show();
+//    return app.exec();
+
 
     QGuiApplication a(argc, argv);
-
     QQmlApplicationEngine engine;
-    engine.load(QUrl(QStringLiteral("nimimap.qml")));
-
-//    w.show();
+    engine.load(QUrl(QStringLiteral("qrc:/minimap.qml")));
     return a.exec();
+
 }

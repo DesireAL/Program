@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/">
+        <file>minimap.qml</file>
+        <file>Lnglat_menu.qml</file>
+    </qresource>
+</RCC>

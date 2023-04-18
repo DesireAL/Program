@@ -15,11 +15,14 @@ LngLat::LngLat(QWidget *parent)
     pathButton = new QPushButton(QStringLiteral("路径显示"),this);
     //按钮布局
 //    lnglatLayout = new QHBoxLayout(this);
-//    menuLayout = new QVBoxLayout(this);
-//    lnglatLayout->addWidget(lnglatButton);
-//    menuLayout->addLayout(lnglatLayout);
+//    menuLayout = new QVBoxLayout();
+//    menuLayout->addWidget(lnglatButton);
+//    menuLayout->addWidget(queryButton);
+//    menuLayout->addWidget(pathButton);
+//    lnglatLayout->addLayout(menuLayout);
     //按钮大小与位置
 //    lnglatButton->setFixedSize(100,50);
+
     lnglatButton->resize(100,50);
     lnglatButton->move(1050,200);
     queryButton->resize(100,50);

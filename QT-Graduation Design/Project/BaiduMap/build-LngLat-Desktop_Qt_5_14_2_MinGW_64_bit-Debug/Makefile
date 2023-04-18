@@ -248,7 +248,7 @@ Makefile: ../LngLat/LngLat.pro D:/Qt5.14.2/5.14.2/mingw73_64/mkspecs/win32-g++/q
 		D:/Qt5.14.2/5.14.2/mingw73_64/mkspecs/features/qt_config.prf \
 		D:/Qt5.14.2/5.14.2/mingw73_64/mkspecs/win32-g++/qmake.conf \
 		D:/Qt5.14.2/5.14.2/mingw73_64/mkspecs/features/spec_post.prf \
-		../.qmake.stash \
+		.qmake.stash \
 		D:/Qt5.14.2/5.14.2/mingw73_64/mkspecs/features/exclusive_builds.prf \
 		D:/Qt5.14.2/5.14.2/mingw73_64/mkspecs/features/toolchain.prf \
 		D:/Qt5.14.2/5.14.2/mingw73_64/mkspecs/features/default_pre.prf \
@@ -281,7 +281,8 @@ Makefile: ../LngLat/LngLat.pro D:/Qt5.14.2/5.14.2/mingw73_64/mkspecs/win32-g++/q
 		D:/Qt5.14.2/5.14.2/mingw73_64/lib/Qt5Network.prl \
 		D:/Qt5.14.2/5.14.2/mingw73_64/lib/Qt5Core.prl \
 		D:/Qt5.14.2/5.14.2/mingw73_64/lib/qtmain.prl \
-		D:/Qt5.14.2/5.14.2/mingw73_64/mkspecs/features/build_pass.prf
+		D:/Qt5.14.2/5.14.2/mingw73_64/mkspecs/features/build_pass.prf \
+		../LngLat/qml.qrc
 	$(QMAKE) -o Makefile ..\LngLat\LngLat.pro -spec win32-g++ "CONFIG+=debug" "CONFIG+=qml_debug"
 D:/Qt5.14.2/5.14.2/mingw73_64/mkspecs/features/spec_pre.prf:
 D:/Qt5.14.2/5.14.2/mingw73_64/mkspecs/qdevice.pri:
@@ -461,7 +462,7 @@ D:/Qt5.14.2/5.14.2/mingw73_64/mkspecs/features/qt_functions.prf:
 D:/Qt5.14.2/5.14.2/mingw73_64/mkspecs/features/qt_config.prf:
 D:/Qt5.14.2/5.14.2/mingw73_64/mkspecs/win32-g++/qmake.conf:
 D:/Qt5.14.2/5.14.2/mingw73_64/mkspecs/features/spec_post.prf:
-../.qmake.stash:
+.qmake.stash:
 D:/Qt5.14.2/5.14.2/mingw73_64/mkspecs/features/exclusive_builds.prf:
 D:/Qt5.14.2/5.14.2/mingw73_64/mkspecs/features/toolchain.prf:
 D:/Qt5.14.2/5.14.2/mingw73_64/mkspecs/features/default_pre.prf:
@@ -495,6 +496,7 @@ D:/Qt5.14.2/5.14.2/mingw73_64/lib/Qt5Network.prl:
 D:/Qt5.14.2/5.14.2/mingw73_64/lib/Qt5Core.prl:
 D:/Qt5.14.2/5.14.2/mingw73_64/lib/qtmain.prl:
 D:/Qt5.14.2/5.14.2/mingw73_64/mkspecs/features/build_pass.prf:
+../LngLat/qml.qrc:
 qmake: FORCE
 	@$(QMAKE) -o Makefile ..\LngLat\LngLat.pro -spec win32-g++ "CONFIG+=debug" "CONFIG+=qml_debug"
 
@@ -505,6 +507,7 @@ all: debug-all release-all  FORCE
 clean: debug-clean release-clean  FORCE
 distclean: debug-distclean release-distclean  FORCE
 	-$(DEL_FILE) Makefile
+	-$(DEL_FILE) .qmake.stash
 
 debug-mocclean:
 	$(MAKE) -f $(MAKEFILE).Debug mocclean

@@ -1,6 +1,9 @@
 ﻿#include "lnglat_menu.h"
 #include "ui_lnglat_menu.h"
 
+#include <QGuiApplication>
+#include <QQmlApplicationEngine>
+
 lnglat_menu::lnglat_menu(QWidget *parent) :
     QWidget(parent),
     ui(new Ui::lnglat_menu)
@@ -60,6 +63,8 @@ void lnglat_menu::commitButton_clicked()
     double latitude;
     longitude = yLineEdit->text().toDouble();       //获取纬度
     latitude = xLineEdit->text().toDouble();        //获取经度
+    this->close();
+
 }
 
 lnglat_menu::~lnglat_menu()
