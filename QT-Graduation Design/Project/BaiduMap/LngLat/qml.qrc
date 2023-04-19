@@ -1,6 +1,8 @@
 <RCC>
     <qresource prefix="/">
-        <file>minimap.qml</file>
-        <file>Lnglat_menu.qml</file>
+        <file>Minimap.qml</file>
+        <file>Lnglat.qml</file>
+        <file>Timequery.qml</file>
+        <file>Path.qml</file>
     </qresource>
 </RCC>

@@ -1,10 +1,9 @@
-﻿import QtQuick 2.12
+﻿import QtQuick 2.0
 import QtQuick.Window 2.14
-import QtQuick.Controls 2.5
 
 Window {
     id: root
-    title: "经纬度设置"
+    title: "时间查询"
     visible: false
     width: 300
     height: 200

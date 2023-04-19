@@ -31,3 +31,9 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 
 RESOURCES += \
     qml.qrc
+
+DISTFILES += \
+    Lnglat.qml \
+    Minimap.qml \
+    Path.qml \
+    Timequery.qml

@@ -15,7 +15,7 @@ int main(int argc, char *argv[])
 
     QGuiApplication a(argc, argv);
     QQmlApplicationEngine engine;
-    engine.load(QUrl(QStringLiteral("qrc:/minimap.qml")));
+    engine.load(QUrl(QStringLiteral("qrc:/Minimap.qml")));
     return a.exec();
 
 }

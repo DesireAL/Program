@@ -62,7 +62,10 @@ OBJECTS       = debug/lnglat_menu.o \
 		debug/moc_lnglat.o \
 		debug/moc_lnglat_menu.o
 
-DIST          =  ..\LngLat\lnglat.h \
+DIST          = Lnglat.qml \
+		Minimap.qml \
+		Path.qml \
+		Timequery.qml ..\LngLat\lnglat.h \
 		..\LngLat\lnglat_menu.h ..\LngLat\lnglat_menu.cpp \
 		..\LngLat\main.cpp \
 		..\LngLat\lnglat.cpp
@@ -110,7 +113,10 @@ compiler_rcc_clean:
 	-$(DEL_FILE) debug\qrc_qml.cpp
 debug/qrc_qml.cpp: ../LngLat/qml.qrc \
 		D:/Qt5.14.2/5.14.2/mingw73_64/bin/rcc.exe \
-		../LngLat/minimap.qml
+		../LngLat/Minimap.qml \
+		../LngLat/Timequery.qml \
+		../LngLat/Path.qml \
+		../LngLat/Lnglat.qml
 	D:\Qt5.14.2\5.14.2\mingw73_64\bin\rcc.exe -name qml ..\LngLat\qml.qrc -o debug\qrc_qml.cpp
 
 compiler_moc_predefs_make_all: debug/moc_predefs.h
