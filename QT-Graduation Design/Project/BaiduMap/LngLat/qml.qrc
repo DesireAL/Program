@@ -3,6 +3,6 @@
         <file>Minimap.qml</file>
         <file>Lnglat.qml</file>
         <file>Timequery.qml</file>
-        <file>Path.qml</file>
+        <file>Pathdisplay.qml</file>
     </qresource>
 </RCC>

@@ -29,6 +29,7 @@ Window {
                 verticalAlignment: TextInput.AlignVCenter
                 selectByMouse: true
                 anchors.margins: 5
+                text: "39.7468"
             }
         }
         Text {
@@ -50,6 +51,7 @@ Window {
                 verticalAlignment: TextInput.AlignVCenter
                 selectByMouse: true
                 anchors.margins: 5
+                text: "116.3196"
             }
         }
         Text {
@@ -75,8 +77,8 @@ Window {
         MouseArea{
             anchors.fill: parent
             onClicked:{
-                longitude = Number(lng.toString())
-                latitude = Number(lat.toString())
+                longitude = Number(lng.text)
+                latitude = Number(lat.text)
                 root.close()
             }
         }

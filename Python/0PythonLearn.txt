@@ -354,7 +354,8 @@ day39 2023.04.06	 python			导入模块:
 															格式化的时间字符串: "2020-10-03 17:54"
 															时间元组: 月、日、一年中的第几天计算从1开始, 周、时、分、秒计算从0开始
 															time模块:
-																			 time.time(): 时间戳
+																			 time.time(): 时间戳(1970年起)
+																			 time.timezone(): 时区, 但是返回的结果是秒, 转换为小时需要/60/60
 																			 time.sleep(): 延迟时间, 按秒算
 																			 time.localtime([secs]): 按时间戳转换为当前地区的时间元组，不提供secs则为当前时间
 																			 time.gmtime([secs]): 将时间戳转换为0时区的时间元组
@@ -362,11 +363,17 @@ day39 2023.04.06	 python			导入模块:
 																			 time.strftime("%Y-%m-%d %X", time.localtime()): 将时间元组转换为特定格式, 上式为转换当前时间
 																			 time.strptime(str, "%Y-%m-%d %X"): 根据字符串与其格式转成时间元组
 														  datetime模块:
-															 						 datetime.datetime.now(): 返回当前时间, 使用print可以直接打印格式化时间
-																					 datetime.datetime.fromtimestamp(): 时间戳转换成时间
-																					 datetime.timedelta(参数): 可以增加/修改时间
+															 						 datetime.now(): 返回当前时间, 使用print可以直接打印格式化时间
+																					 datetime.utcnow(): 太平洋时间
+																					 datetime.now(timezone(timedelte(hours=7))): 当前东七区时间
+																					 datetime.fromtimestamp(): 时间戳转换成时间
+																					 datetime.timestamp(): 时间转时间戳
+																					 datetime.now() + datetime.timedelta(days=140, minutes=5): 可以增加/修改时间
 																					 d = datetime.datetime.now()
 																					 d.replace(year=xxxx, month=x, ...): 可以直接替换(修改)时间
+																					 text = "2023-04-22"
+																					 datetime.strptime(text, "%Y-%m-%d"): 将用户输入的时间格式化后可用进行加减比较的操作
+																					 v1 = datetime.now(), v1.strftime("%Y-%m-%d %H:%M:%S"): 将时间格式转化为字符串格式
 														  openpyxl(Excel)模块:
 																								 from openpyxl import Workbook
 																								 wb = Workbook()		# 创建Excel
@@ -536,3 +543,50 @@ day45 2023.04.13   python     hashlib模块:md5加密
 																							hash_object = hashlib.md5(salt.encode('utf-8'))			# 加盐
 																							hash_object.update(origin.encode('utf-8'))				# 内容加密
 																							result = hash_object.hexdigest()
+
+day46 2023.04.22   python     json模块: 可以将python的数据格式转换为json格式的数据, 也可以反过来转换
+																				用于跨语言数据传输, 如python数据传入到java需要先将数据转换为json格式
+																				import json
+																					转换为json格式(序列化): data = json.dumps("数据", (ensure_ascii=False)) 后面的参数为不将中文转换为Unicode格式
+																					不支持的格式可以先转化为字符串的格式, 如set集合
+																					转换为python格式(反序列化): data = json.loads("数据")
+																					json.dump(data, file): 将数据序列化后写入到文件中
+																					json,load(file): 读取文件中的数据病反序列化为python的类型
+															正则表达式:
+																				import re
+																				re.findall("字符串", "变量名"): 找文本中的字符串
+																				"[abc]": 找文本中的a或b或c
+																				"q[abc]": 找qa或qb或qc
+																				"[^abc]": 除了a和b和c的任意字符
+																				"[a-z]"/"[0-9]": 找任意a-9/0-9
+																				".": 除了换行符以外的任意字符(r.o 为 r任意o)
+																				"+": 出现一次或者N次(r.+o 可以为 rzxcaoosdahjo) 贪婪匹配, 能匹配长的就匹配长的
+																				"*": 零次或N次
+																				"+?": 非贪婪匹配
+																				"?": 零次或一次
+																				"\w": 字母或数字或下划线(汉字)
+																				"\d": 数字
+																				"\s": 任意的空白符, 包括空格、制表符等
+																				"{n}": 出现n次
+																				"{n,n2}": 出现n次或更多次(或n次到n2次)
+																				"()": 分组, 匹配成功后只提取括号内的值, 可以多个括号, 或者括号里面套括号, 会输出元组
+																				"(?P<名称>正则)": 命名分组, 配合finditer和groupdict可以输出字典
+																				"|": 或
+																				"^...$": 起始和结束, 必须以...中的正则表达式格式(格式校验)
+																				\: 转义字符
+																				re模块其余函数：
+																			  .match: 从起始位置开始匹配, 匹配成功返回一个对象, 否则返回None
+																				.search: 浏览整个字符串去匹配第一个对象, 匹配失败返回None
+																				.group: 将返回的对象转换为字符串? 可以用于print
+																				.sub: 替换匹配成功的位置, 类似于replace
+																				.split: 根据匹配成功的位置进行分割
+																				.finditer: 迭代器, 在循环的过程中每循环一次匹配一次 使用.group获取
+															BeautifulSoup模块可以提取评论
+															单文件可完成的简单内容:
+															1."""..."""注释
+															2.导入模块顺序(内置、第三方、自定义)
+															3.全局变量大写
+															4.函数名命名规范&函数功能注释
+															5.TODO 信息(下一期要完成的任务)
+															6.部分功能代码注释
+															7.if __name__ == '__main__' 主文件

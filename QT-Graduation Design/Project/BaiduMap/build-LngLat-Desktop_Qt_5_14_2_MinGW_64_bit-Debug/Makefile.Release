@@ -64,7 +64,7 @@ OBJECTS       = release/lnglat_menu.o \
 
 DIST          = Lnglat.qml \
 		Minimap.qml \
-		Path.qml \
+		Pathdisplay.qml \
 		Timequery.qml ..\LngLat\lnglat.h \
 		..\LngLat\lnglat_menu.h ..\LngLat\lnglat_menu.cpp \
 		..\LngLat\main.cpp \
@@ -115,7 +115,7 @@ release/qrc_qml.cpp: ../LngLat/qml.qrc \
 		D:/Qt5.14.2/5.14.2/mingw73_64/bin/rcc.exe \
 		../LngLat/Minimap.qml \
 		../LngLat/Timequery.qml \
-		../LngLat/Path.qml \
+		../LngLat/Pathdisplay.qml \
 		../LngLat/Lnglat.qml
 	D:\Qt5.14.2\5.14.2\mingw73_64\bin\rcc.exe -name qml ..\LngLat\qml.qrc -o release\qrc_qml.cpp
 

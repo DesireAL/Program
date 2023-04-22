@@ -10,29 +10,59 @@ Window {
     width: 1200
     height: 800
     visible: true
-    property double longitude: lnglatWindow.longitude
-    property double latitude: lnglatWindow.latitude
+
+    //地图插件
     Plugin {
         id: mapPlugin
-//        name: "osm"
-        // "mapboxgl", "esri", ...
-        name:"mapboxgl"
+        name:"mapboxgl" //"osm"
     }
-    //修改经纬度后
-    onLongitudeChanged: map.update()
-    Map {
+
+    //地图主体
+    Rectangle{
         id: map
-        //锚(位置)
-        anchors.left: parent
-        x:0; y:0
-        width: 1200
+        anchors.fill: parent
+        width:1200
         height: 800
-        //插件
-        plugin: mapPlugin
-        //学校坐标
-        center: QtPositioning.coordinate(longitude,latitude)
-        //缩放大小
-        zoomLevel: 17
+        Map {
+            property double longitude: lnglatWindow.longitude
+            property double latitude: lnglatWindow.latitude
+            //锚(位置)
+            anchors.fill: parent
+            width: 1200
+            height: 800
+            //插件
+            plugin: mapPlugin
+            //学校坐标
+            center: QtPositioning.coordinate(longitude,latitude)
+            //缩放大小
+            zoomLevel: 17.3
+        }
+    }
+    //显示鼠标位置经纬度
+    Rectangle{
+        x:1000 ; y:0
+        width:200
+        height:20
+        border.color: "black"
+        color: "white"
+
+        Rectangle{
+            x:1000 ; y:0
+            width:100
+            height:20
+
+            //经度
+            Text{
+                anchors.left: parent
+                text: "经度:"
+            }
+        }
+
+        //纬度
+        Text{
+            x:1100 ; y:0
+            text: "纬度:"
+        }
     }
 
     //经纬度界面实例化
@@ -86,7 +116,7 @@ Window {
     }
 
     //路径显示界面实例化
-    Path{
+    Pathdisplay{
         id:pathWindow
     }
     //路径显示按钮

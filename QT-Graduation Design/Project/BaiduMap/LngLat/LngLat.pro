@@ -35,5 +35,5 @@ RESOURCES += \
 DISTFILES += \
     Lnglat.qml \
     Minimap.qml \
-    Path.qml \
+    Pathdisplay.qml \
     Timequery.qml
