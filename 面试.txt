@@ -65,3 +65,10 @@ web开发框架：Django
              httplib(HTTP协议的封装)
 网络编程模块：socket(TCP/IP协议的封装)
 网络由下往上分为：物理层(IEEE 802.3)、数据链路层、网络层(IP)、传输层(TCP)、会话层(SQL)、表示层和应用层(HTTP)。
+
+输出文件夹下所有文件的路径(包含嵌套)
+def get_file_path(folder_path):
+    for base_path, folder_path, file_list in os.walk(folder_path):
+        for file in file_list:
+            file_path = os.path.join(base_path, file)
+            print(file_path)
